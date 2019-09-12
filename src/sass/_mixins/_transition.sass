@@ -1,0 +1,4 @@
+$transition: ( 'delay': 300ms, 'type': ease-out )
+
+@mixin transition()
+  transition: map-get($transition, 'delay') map-get($transition, 'type')
