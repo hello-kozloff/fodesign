@@ -1,0 +1,12 @@
+include ../../core/bemto
+
+mixin section-header(overHeading, heading, description)
+    +b.section-header
+        if (overHeading)
+            +e("span").over-heading= overHeading
+
+        if (heading)
+            +e("h3").heading= heading
+
+        if (description)
+            +e("p").description= description
