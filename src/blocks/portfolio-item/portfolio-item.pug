@@ -1,0 +1,12 @@
+include ../../core/bemto
+
+mixin portfolio-item(content, image)
+    - var background = image.x1 + " 1x, " + image.x2 + " 2x"
+
+    +b("a")(href="#" data-bgset=background).portfolio-item.lazyload
+        +e("div").overlay
+            +e("span").heading= content.heading
+            +e("p").description= content.description
+            +e("span").tag
+                i(class=content.tag.icon)
+                span= content.tag.text

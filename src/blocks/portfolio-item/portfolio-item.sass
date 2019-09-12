@@ -1,0 +1,74 @@
+@import "../../sass/_mixins/transition"
+@import "../../sass/variables"
+
+.portfolio-item
+  max-width: 560px
+  width: 100%
+  height: 360px
+
+  display: inline-block
+
+  text-decoration: none
+  outline: none
+
+  background-size: cover
+  background-position: center
+
+  //- portfolio-item__overlay - wrapper
+  &__overlay
+    width: 100%
+    height: 100%
+
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    padding: 40px 60px
+    box-sizing: border-box
+
+    background: rgba(#08090D, .5)
+
+    opacity: 0
+    @include transition()
+
+  &__heading
+    margin: 0 0 20px 0
+
+    color: $c-white
+    font-size: 20px
+    font-weight: 500
+    line-height: 180%
+
+  &__description
+    color: $c-white
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+  &__tag
+    opacity: .5
+    margin-top: auto
+
+    color: $c-white
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+    vertical-align: middle
+
+    > i
+      position: relative
+      top: -2px
+
+      font-size: 24px
+      margin-right: 13px
+
+      vertical-align: middle
+  //- portfolio-item__overlay - wrapper end
+
+  &:hover .portfolio-item__overlay,
+  &:focus .portfolio-item__overlay
+    opacity: 1
+
+  &:active .portfolio-item__overlay
+    background: rgba(#08090D, .3)
