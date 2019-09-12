@@ -25,38 +25,9 @@
     display: flex
     align-items: center
 
-  &__hamburger
-    width: 60px
-    height: 60px
-
-    display: flex
-    align-items: center
-    justify-content: center
-
-    @include rest-button()
-    border-radius: 50%
-
-    span
-      width: 4px
-      height: 4px
-
-      display: inline-block
-      vertical-align: middle
-
-      border-radius: 50%
-
-      &:not(:last-child)
-        margin-right: 6px
-
-      @include transition()
-
-    @include transition()
-
   //- header__home - wrapper
   &__home
-    margin-left: 20px
     display: inline-block
-
     text-decoration: none
     outline: none
 
@@ -118,25 +89,27 @@
       margin-left: 15px
 
     @include transition()
+
+    &_hamburger
+      span
+        width: 4px
+        height: 4px
+
+        display: inline-block
+        vertical-align: middle
+
+        border-radius: 50%
+
+        &:not(:last-child)
+          margin-right: 6px
+
+        @include transition()
+
   //- header__buttons - wrapper end
 
 //- Theming
 .page_theme_dark
   .header
-    &__hamburger
-      > span
-        background: rgba($c-white, .5)
-
-      &:hover,
-      &:focus
-        > span
-          background: rgba($c-white, 1)
-
-        background: rgba($c-white, .05)
-
-      &:active
-        background: rgba($c-white, .1)
-
     &__home
       &:hover .header__logo,
       &:focus .header__logo
@@ -160,11 +133,16 @@
     //- header__buttons - wrapper
     &__button
       color: $c-white
+      background: rgba($c-white, .05)
+
+      &_hamburger
+        > span
+          background: $c-white
 
       &:hover,
       &:focus
-        background: rgba($c-white, .05)
+        background: rgba($c-white, .1)
 
       &:active
-        background: rgba($c-white, .1)
+        background: rgba($c-white, .15)
     //- header__buttons - wrapper end

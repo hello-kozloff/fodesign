@@ -2,11 +2,6 @@ include ../../core/bemto
 
 +b("header").header
     +e.content
-        +e("button")(type="button").hamburger
-            span
-            span
-            span
-
         +e("a")(href="#").home
             +e("svg").logo
                 polygon(points="0,0 8,8 0,8 8,16 0,16 8,24 8,16 16,16 8,8 16,8 16,0")
@@ -18,3 +13,8 @@ include ../../core/bemto
     +e.buttons
         +e("button")(type="button").button
             i(class="icon-night")
+
+        +e("button")(type="button").button_hamburger
+            span
+            span
+            span
