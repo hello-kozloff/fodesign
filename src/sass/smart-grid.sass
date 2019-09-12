@@ -1,25 +1,28 @@
 $columns: 12
 $atom: (100% / $columns)
 
-$break_xl: 1200px
-$break_lg: 992px
-$break_md: 768px
-$break_sm: 576px
-$break_xs: 100%
+$break_largeDesktop: 1760px
+$break_desktop: 992px
+$break_largeTablet: 992px
+$break_smallTablet: 768px
+$break_phone: 576px
+$break_smallPhone: 100%
 
 $offset: 30px
-$offset_xl: $offset
-$offset_lg: $offset
-$offset_md: $offset
-$offset_sm: $offset
-$offset_xs: $offset
+$offset_largeDesktop: $offset
+$offset_desktop: $offset
+$offset_largeTablet: $offset
+$offset_smallTablet: $offset
+$offset_phone: $offset
+$offset_smallPhone: $offset
 
 $offset_one_side: ($offset / 2)
-$offset_xl_one_side: ($offset_xl / 2)
-$offset_lg_one_side: ($offset_lg / 2)
-$offset_md_one_side: ($offset_md / 2)
-$offset_sm_one_side: ($offset_sm / 2)
-$offset_xs_one_side: ($offset_xs / 2)
+$offset_largeDesktop_one_side: ($offset_largeDesktop / 2)
+$offset_desktop_one_side: ($offset_desktop / 2)
+$offset_largeTablet_one_side: ($offset_largeTablet / 2)
+$offset_smallTablet_one_side: ($offset_smallTablet / 2)
+$offset_phone_one_side: ($offset_phone / 2)
+$offset_smallPhone_one_side: ($offset_smallPhone / 2)
 
 $fields: 15px
 
@@ -36,7 +39,7 @@ $fields: 15px
     #{$type}-right: $offset_one_side
 
 =wrapper()
-    max-width: 1200px
+    max-width: 1760px
     margin: 0 auto
     +wrapper-full()
 
@@ -72,25 +75,29 @@ $fields: 15px
     $val: 100% / $columns * $n
     width: #{calc(#{$val} - #{$offset})}
 
-=size-xl($n)
+=size-largeDesktop($n)
     $val: 100% / $columns * $n
-    +xl(width, #{calc(#{$val} - #{$offset_xl})})
+    +largeDesktop(width, #{calc(#{$val} - #{$offset_largeDesktop})})
 
-=size-lg($n)
+=size-desktop($n)
     $val: 100% / $columns * $n
-    +lg(width, #{calc(#{$val} - #{$offset_lg})})
+    +desktop(width, #{calc(#{$val} - #{$offset_desktop})})
 
-=size-md($n)
+=size-largeTablet($n)
     $val: 100% / $columns * $n
-    +md(width, #{calc(#{$val} - #{$offset_md})})
+    +largeTablet(width, #{calc(#{$val} - #{$offset_largeTablet})})
 
-=size-sm($n)
+=size-smallTablet($n)
     $val: 100% / $columns * $n
-    +sm(width, #{calc(#{$val} - #{$offset_sm})})
+    +smallTablet(width, #{calc(#{$val} - #{$offset_smallTablet})})
 
-=size-xs($n)
+=size-phone($n)
     $val: 100% / $columns * $n
-    +xs(width, #{calc(#{$val} - #{$offset_xs})})
+    +phone(width, #{calc(#{$val} - #{$offset_phone})})
+
+=size-smallPhone($n)
+    $val: 100% / $columns * $n
+    +smallPhone(width, #{calc(#{$val} - #{$offset_smallPhone})})
 
 =shift($n)
     $val: 100% / $columns * $n
@@ -118,174 +125,208 @@ $fields: 15px
     $val: 100% / $columns * $n
     padding-right: #{calc(#{$val} + #{$offset_one_side})}
 
-=shift-xl($n)
+=shift-largeDesktop($n)
     $val: 100% / $columns * $n
-    +xl(margin-left, #{calc(#{$val} + #{$offset_xl_one_side})})
-    +xl(margin-right, #{calc(#{$val} + #{$offset_xl_one_side})})
+    +largeDesktop(margin-left, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
+    +largeDesktop(margin-right, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
 
-=shift-xl-left($n)
+=shift-largeDesktop-left($n)
     $val: 100% / $columns * $n
-    +xl(margin-left, #{calc(#{$val} + #{$offset_xl_one_side})})
+    +largeDesktop(margin-left, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
 
-=shift-xl-right($n)
+=shift-largeDesktop-right($n)
     $val: 100% / $columns * $n
-    +xl(margin-right, #{calc(#{$val} + #{$offset_xl_one_side})})
+    +largeDesktop(margin-right, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
 
-=shift-xl-padding($n)
+=shift-largeDesktop-padding($n)
     $val: 100% / $columns * $n
-    +xl(padding-left, #{calc(#{$val} + #{$offset_xl_one_side})})
-    +xl(padding-right, #{calc(#{$val} + #{$offset_xl_one_side})})
+    +largeDesktop(padding-left, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
+    +largeDesktop(padding-right, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
 
-=shift-xl-padding-left($n)
+=shift-largeDesktop-padding-left($n)
     $val: 100% / $columns * $n
-    +xl(padding-left, #{calc(#{$val} + #{$offset_xl_one_side})})
+    +largeDesktop(padding-left, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
 
-=shift-xl-padding-right($n)
+=shift-largeDesktop-padding-right($n)
     $val: 100% / $columns * $n
-    +xl(padding-right, #{calc(#{$val} + #{$offset_xl_one_side})})
+    +largeDesktop(padding-right, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
 
-=shift-lg($n)
+=shift-desktop($n)
     $val: 100% / $columns * $n
-    +lg(margin-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-    +lg(margin-right, #{calc(#{$val} + #{$offset_lg_one_side})})
+    +desktop(margin-left, #{calc(#{$val} + #{$offset_desktop_one_side})})
+    +desktop(margin-right, #{calc(#{$val} + #{$offset_desktop_one_side})})
 
-=shift-lg-left($n)
+=shift-desktop-left($n)
     $val: 100% / $columns * $n
-    +lg(margin-left, #{calc(#{$val} + #{$offset_lg_one_side})})
+    +desktop(margin-left, #{calc(#{$val} + #{$offset_desktop_one_side})})
 
-=shift-lg-right($n)
+=shift-desktop-right($n)
     $val: 100% / $columns * $n
-    +lg(margin-right, #{calc(#{$val} + #{$offset_lg_one_side})})
+    +desktop(margin-right, #{calc(#{$val} + #{$offset_desktop_one_side})})
 
-=shift-lg-padding($n)
+=shift-desktop-padding($n)
     $val: 100% / $columns * $n
-    +lg(padding-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-    +lg(padding-right, #{calc(#{$val} + #{$offset_lg_one_side})})
+    +desktop(padding-left, #{calc(#{$val} + #{$offset_desktop_one_side})})
+    +desktop(padding-right, #{calc(#{$val} + #{$offset_desktop_one_side})})
 
-=shift-lg-padding-left($n)
+=shift-desktop-padding-left($n)
     $val: 100% / $columns * $n
-    +lg(padding-left, #{calc(#{$val} + #{$offset_lg_one_side})})
+    +desktop(padding-left, #{calc(#{$val} + #{$offset_desktop_one_side})})
 
-=shift-lg-padding-right($n)
+=shift-desktop-padding-right($n)
     $val: 100% / $columns * $n
-    +lg(padding-right, #{calc(#{$val} + #{$offset_lg_one_side})})
+    +desktop(padding-right, #{calc(#{$val} + #{$offset_desktop_one_side})})
 
-=shift-md($n)
+=shift-largeTablet($n)
     $val: 100% / $columns * $n
-    +md(margin-left, #{calc(#{$val} + #{$offset_md_one_side})})
-    +md(margin-right, #{calc(#{$val} + #{$offset_md_one_side})})
+    +largeTablet(margin-left, #{calc(#{$val} + #{$offset_largeTablet_one_side})})
+    +largeTablet(margin-right, #{calc(#{$val} + #{$offset_largeTablet_one_side})})
 
-=shift-md-left($n)
+=shift-largeTablet-left($n)
     $val: 100% / $columns * $n
-    +md(margin-left, #{calc(#{$val} + #{$offset_md_one_side})})
+    +largeTablet(margin-left, #{calc(#{$val} + #{$offset_largeTablet_one_side})})
 
-=shift-md-right($n)
+=shift-largeTablet-right($n)
     $val: 100% / $columns * $n
-    +md(margin-right, #{calc(#{$val} + #{$offset_md_one_side})})
+    +largeTablet(margin-right, #{calc(#{$val} + #{$offset_largeTablet_one_side})})
 
-=shift-md-padding($n)
+=shift-largeTablet-padding($n)
     $val: 100% / $columns * $n
-    +md(padding-left, #{calc(#{$val} + #{$offset_md_one_side})})
-    +md(padding-right, #{calc(#{$val} + #{$offset_md_one_side})})
+    +largeTablet(padding-left, #{calc(#{$val} + #{$offset_largeTablet_one_side})})
+    +largeTablet(padding-right, #{calc(#{$val} + #{$offset_largeTablet_one_side})})
 
-=shift-md-padding-left($n)
+=shift-largeTablet-padding-left($n)
     $val: 100% / $columns * $n
-    +md(padding-left, #{calc(#{$val} + #{$offset_md_one_side})})
+    +largeTablet(padding-left, #{calc(#{$val} + #{$offset_largeTablet_one_side})})
 
-=shift-md-padding-right($n)
+=shift-largeTablet-padding-right($n)
     $val: 100% / $columns * $n
-    +md(padding-right, #{calc(#{$val} + #{$offset_md_one_side})})
+    +largeTablet(padding-right, #{calc(#{$val} + #{$offset_largeTablet_one_side})})
 
-=shift-sm($n)
+=shift-smallTablet($n)
     $val: 100% / $columns * $n
-    +sm(margin-left, #{calc(#{$val} + #{$offset_sm_one_side})})
-    +sm(margin-right, #{calc(#{$val} + #{$offset_sm_one_side})})
+    +smallTablet(margin-left, #{calc(#{$val} + #{$offset_smallTablet_one_side})})
+    +smallTablet(margin-right, #{calc(#{$val} + #{$offset_smallTablet_one_side})})
 
-=shift-sm-left($n)
+=shift-smallTablet-left($n)
     $val: 100% / $columns * $n
-    +sm(margin-left, #{calc(#{$val} + #{$offset_sm_one_side})})
+    +smallTablet(margin-left, #{calc(#{$val} + #{$offset_smallTablet_one_side})})
 
-=shift-sm-right($n)
+=shift-smallTablet-right($n)
     $val: 100% / $columns * $n
-    +sm(margin-right, #{calc(#{$val} + #{$offset_sm_one_side})})
+    +smallTablet(margin-right, #{calc(#{$val} + #{$offset_smallTablet_one_side})})
 
-=shift-sm-padding($n)
+=shift-smallTablet-padding($n)
     $val: 100% / $columns * $n
-    +sm(padding-left, #{calc(#{$val} + #{$offset_sm_one_side})})
-    +sm(padding-right, #{calc(#{$val} + #{$offset_sm_one_side})})
+    +smallTablet(padding-left, #{calc(#{$val} + #{$offset_smallTablet_one_side})})
+    +smallTablet(padding-right, #{calc(#{$val} + #{$offset_smallTablet_one_side})})
 
-=shift-sm-padding-left($n)
+=shift-smallTablet-padding-left($n)
     $val: 100% / $columns * $n
-    +sm(padding-left, #{calc(#{$val} + #{$offset_sm_one_side})})
+    +smallTablet(padding-left, #{calc(#{$val} + #{$offset_smallTablet_one_side})})
 
-=shift-sm-padding-right($n)
+=shift-smallTablet-padding-right($n)
     $val: 100% / $columns * $n
-    +sm(padding-right, #{calc(#{$val} + #{$offset_sm_one_side})})
+    +smallTablet(padding-right, #{calc(#{$val} + #{$offset_smallTablet_one_side})})
 
-=shift-xs($n)
+=shift-phone($n)
     $val: 100% / $columns * $n
-    +xs(margin-left, #{calc(#{$val} + #{$offset_xs_one_side})})
-    +xs(margin-right, #{calc(#{$val} + #{$offset_xs_one_side})})
+    +phone(margin-left, #{calc(#{$val} + #{$offset_phone_one_side})})
+    +phone(margin-right, #{calc(#{$val} + #{$offset_phone_one_side})})
 
-=shift-xs-left($n)
+=shift-phone-left($n)
     $val: 100% / $columns * $n
-    +xs(margin-left, #{calc(#{$val} + #{$offset_xs_one_side})})
+    +phone(margin-left, #{calc(#{$val} + #{$offset_phone_one_side})})
 
-=shift-xs-right($n)
+=shift-phone-right($n)
     $val: 100% / $columns * $n
-    +xs(margin-right, #{calc(#{$val} + #{$offset_xs_one_side})})
+    +phone(margin-right, #{calc(#{$val} + #{$offset_phone_one_side})})
 
-=shift-xs-padding($n)
+=shift-phone-padding($n)
     $val: 100% / $columns * $n
-    +xs(padding-left, #{calc(#{$val} + #{$offset_xs_one_side})})
-    +xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})})
+    +phone(padding-left, #{calc(#{$val} + #{$offset_phone_one_side})})
+    +phone(padding-right, #{calc(#{$val} + #{$offset_phone_one_side})})
 
-=shift-xs-padding-left($n)
+=shift-phone-padding-left($n)
     $val: 100% / $columns * $n
-    +xs(padding-left, #{calc(#{$val} + #{$offset_xs_one_side})})
+    +phone(padding-left, #{calc(#{$val} + #{$offset_phone_one_side})})
 
-=shift-xs-padding-right($n)
+=shift-phone-padding-right($n)
     $val: 100% / $columns * $n
-    +xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})})
+    +phone(padding-right, #{calc(#{$val} + #{$offset_phone_one_side})})
 
-=xl($name, $value)
-    @media screen and (max-width: $break_xl)
+=shift-smallPhone($n)
+    $val: 100% / $columns * $n
+    +smallPhone(margin-left, #{calc(#{$val} + #{$offset_smallPhone_one_side})})
+    +smallPhone(margin-right, #{calc(#{$val} + #{$offset_smallPhone_one_side})})
+
+=shift-smallPhone-left($n)
+    $val: 100% / $columns * $n
+    +smallPhone(margin-left, #{calc(#{$val} + #{$offset_smallPhone_one_side})})
+
+=shift-smallPhone-right($n)
+    $val: 100% / $columns * $n
+    +smallPhone(margin-right, #{calc(#{$val} + #{$offset_smallPhone_one_side})})
+
+=shift-smallPhone-padding($n)
+    $val: 100% / $columns * $n
+    +smallPhone(padding-left, #{calc(#{$val} + #{$offset_smallPhone_one_side})})
+    +smallPhone(padding-right, #{calc(#{$val} + #{$offset_smallPhone_one_side})})
+
+=shift-smallPhone-padding-left($n)
+    $val: 100% / $columns * $n
+    +smallPhone(padding-left, #{calc(#{$val} + #{$offset_smallPhone_one_side})})
+
+=shift-smallPhone-padding-right($n)
+    $val: 100% / $columns * $n
+    +smallPhone(padding-right, #{calc(#{$val} + #{$offset_smallPhone_one_side})})
+
+=largeDesktop($name, $value)
+    @media screen and (max-width: $break_largeDesktop)
         #{$name}: $value
 
-=xl-block()
-    @media screen and (max-width: $break_xl)
+=largeDesktop-block()
+    @media screen and (max-width: $break_largeDesktop)
         @content
 
-=lg($name, $value)
-    @media screen and (max-width: $break_lg)
+=desktop($name, $value)
+    @media screen and (max-width: $break_desktop)
         #{$name}: $value
 
-=lg-block()
-    @media screen and (max-width: $break_lg)
+=desktop-block()
+    @media screen and (max-width: $break_desktop)
         @content
 
-=md($name, $value)
-    @media screen and (max-width: $break_md)
+=largeTablet($name, $value)
+    @media screen and (max-width: $break_largeTablet)
         #{$name}: $value
 
-=md-block()
-    @media screen and (max-width: $break_md)
+=largeTablet-block()
+    @media screen and (max-width: $break_largeTablet)
         @content
 
-=sm($name, $value)
-    @media screen and (max-width: $break_sm)
+=smallTablet($name, $value)
+    @media screen and (max-width: $break_smallTablet)
         #{$name}: $value
 
-=sm-block()
-    @media screen and (max-width: $break_sm)
+=smallTablet-block()
+    @media screen and (max-width: $break_smallTablet)
         @content
 
-=xs($name, $value)
-    @media screen and (max-width: $break_xs)
+=phone($name, $value)
+    @media screen and (max-width: $break_phone)
         #{$name}: $value
 
-=xs-block()
-    @media screen and (max-width: $break_xs)
+=phone-block()
+    @media screen and (max-width: $break_phone)
+        @content
+
+=smallPhone($name, $value)
+    @media screen and (max-width: $break_smallPhone)
+        #{$name}: $value
+
+=smallPhone-block()
+    @media screen and (max-width: $break_smallPhone)
         @content
 
 =from($min_width)
