@@ -13,7 +13,7 @@ html(lang="ru")
     body
         include ../../core/bemto
 
-        +b(class="page_layout_" + layout)
+        +b(class="page_layout_" + layout + " page_theme_" + theme)
             block content
 
         script(src="js/bundle.min.js")
