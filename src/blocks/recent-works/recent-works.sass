@@ -2,4 +2,26 @@
 @import "../../sass/smart-grid"
 
 .recent-works
-  @include wrapper()
+  max-width: 1160px
+  margin: 0 auto
+  +wrapper-full()
+
+  .section-header
+    margin-bottom: 120px
+
+    &__description
+      max-width: 800px
+
+  &__content
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    margin-bottom: 40px
+
+    &:not(:nth-child(2n + 2))
+      margin-right: 40px
+
+  &__footer
+    margin-top: 60px - 40px
+    text-align: center
