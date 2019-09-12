@@ -1,16 +1,19 @@
 doctype html
-html(lang='en')
+html(lang="ru")
     block vars
+
     head
-        meta(charset='UTF-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
 
         title #{title}
 
-        link(href='css/bundle.min.css' rel='stylesheet')
+        link(href="css/bundle.min.css" rel="stylesheet")
     body
-        div(class="page page_" + pageName)
+        include ../../core/bemto
+
+        +b(class="page_layout_" + layout)
             block content
 
-        script(src='js/bundle.min.js')
+        script(src="js/bundle.min.js")
