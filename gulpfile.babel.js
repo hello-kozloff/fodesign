@@ -181,7 +181,8 @@ gulp.task("build:blocks-script", () => {
  */
 gulp.task("build:vendors-script", () => {
   return gulp.src([
-    "node_modules/jquery/dist/jquery.js"
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/lazysizes/lazysizes-umd.js"
   ])
     .pipe(contact("vendor.js"))
     .pipe(gulp.dest("static/js"))
