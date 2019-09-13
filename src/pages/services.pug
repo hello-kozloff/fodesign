@@ -9,7 +9,10 @@ block content
     include ../blocks/header/header
 
     include ../blocks/heading-page/heading-page
-    +heading-page(false, "Услуги")
+    +heading-page(false, {
+        tag: "h1",
+        content: "Услуги"
+    })
 
     include ../blocks/services/services
 

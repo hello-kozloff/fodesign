@@ -3,22 +3,38 @@
 
 .heading-page
   max-width: 1160px
+  margin: 0 auto 120px auto
   @include wrapper-full()
 
   padding-top: 140px
-  margin: 0 auto 120px auto
+
+  &__over-heading
+    margin: 0 0 40px 0
+    display: block
+
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
 
   &__heading
+    margin: 0
+
     font-size: 44px
     font-weight: 500
     line-height: 145%
 
 .page_theme_dark
   .heading-page
+    &__over-heading
+      color: rgba($c-white, .75)
+
     &__heading
       color: $c-white
 
 .page_theme_light
   .heading-page
+    &__over-heading
+      color: rgba($c-black, .75)
+
     &__heading
       color: $c-black
