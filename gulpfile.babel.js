@@ -258,6 +258,9 @@ gulp.task("build:smart-grid", () => {
       largeDesktop: {
         width: '1760px'
       },
+      mediumDesktop: {
+        width: '1200px'
+      },
       desktop: {
         width: '992px'
       },

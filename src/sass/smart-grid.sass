@@ -2,6 +2,7 @@ $columns: 12
 $atom: (100% / $columns)
 
 $break_largeDesktop: 1760px
+$break_mediumDesktop: 1200px
 $break_desktop: 992px
 $break_largeTablet: 992px
 $break_smallTablet: 768px
@@ -10,6 +11,7 @@ $break_smallPhone: 100%
 
 $offset: 30px
 $offset_largeDesktop: $offset
+$offset_mediumDesktop: $offset
 $offset_desktop: $offset
 $offset_largeTablet: $offset
 $offset_smallTablet: $offset
@@ -18,6 +20,7 @@ $offset_smallPhone: $offset
 
 $offset_one_side: ($offset / 2)
 $offset_largeDesktop_one_side: ($offset_largeDesktop / 2)
+$offset_mediumDesktop_one_side: ($offset_mediumDesktop / 2)
 $offset_desktop_one_side: ($offset_desktop / 2)
 $offset_largeTablet_one_side: ($offset_largeTablet / 2)
 $offset_smallTablet_one_side: ($offset_smallTablet / 2)
@@ -78,6 +81,10 @@ $fields: 15px
 =size-largeDesktop($n)
     $val: 100% / $columns * $n
     +largeDesktop(width, #{calc(#{$val} - #{$offset_largeDesktop})})
+
+=size-mediumDesktop($n)
+    $val: 100% / $columns * $n
+    +mediumDesktop(width, #{calc(#{$val} - #{$offset_mediumDesktop})})
 
 =size-desktop($n)
     $val: 100% / $columns * $n
@@ -150,6 +157,32 @@ $fields: 15px
 =shift-largeDesktop-padding-right($n)
     $val: 100% / $columns * $n
     +largeDesktop(padding-right, #{calc(#{$val} + #{$offset_largeDesktop_one_side})})
+
+=shift-mediumDesktop($n)
+    $val: 100% / $columns * $n
+    +mediumDesktop(margin-left, #{calc(#{$val} + #{$offset_mediumDesktop_one_side})})
+    +mediumDesktop(margin-right, #{calc(#{$val} + #{$offset_mediumDesktop_one_side})})
+
+=shift-mediumDesktop-left($n)
+    $val: 100% / $columns * $n
+    +mediumDesktop(margin-left, #{calc(#{$val} + #{$offset_mediumDesktop_one_side})})
+
+=shift-mediumDesktop-right($n)
+    $val: 100% / $columns * $n
+    +mediumDesktop(margin-right, #{calc(#{$val} + #{$offset_mediumDesktop_one_side})})
+
+=shift-mediumDesktop-padding($n)
+    $val: 100% / $columns * $n
+    +mediumDesktop(padding-left, #{calc(#{$val} + #{$offset_mediumDesktop_one_side})})
+    +mediumDesktop(padding-right, #{calc(#{$val} + #{$offset_mediumDesktop_one_side})})
+
+=shift-mediumDesktop-padding-left($n)
+    $val: 100% / $columns * $n
+    +mediumDesktop(padding-left, #{calc(#{$val} + #{$offset_mediumDesktop_one_side})})
+
+=shift-mediumDesktop-padding-right($n)
+    $val: 100% / $columns * $n
+    +mediumDesktop(padding-right, #{calc(#{$val} + #{$offset_mediumDesktop_one_side})})
 
 =shift-desktop($n)
     $val: 100% / $columns * $n
@@ -287,6 +320,14 @@ $fields: 15px
 
 =largeDesktop-block()
     @media screen and (max-width: $break_largeDesktop)
+        @content
+
+=mediumDesktop($name, $value)
+    @media screen and (max-width: $break_mediumDesktop)
+        #{$name}: $value
+
+=mediumDesktop-block()
+    @media screen and (max-width: $break_mediumDesktop)
         @content
 
 =desktop($name, $value)
