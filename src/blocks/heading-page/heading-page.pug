@@ -1,7 +1,7 @@
 include ../../core/bemto
 
 mixin heading-page(overHeading, heading)
-    +b.heading-page
+    +b("section").heading-page
         if (overHeading !== false)
             +e(overHeading.tag).over-heading= overHeading.content
 
