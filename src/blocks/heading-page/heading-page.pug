@@ -1,4 +1,8 @@
 include ../../core/bemto
 
-mixin heading-page(heading)
-    +b("h1").heading-page= heading
+mixin heading-page(overHeading, heading)
+    +b.heading-page
+        if (overHeading !== false)
+            +e("h1").over-heading= overHeading
+
+        +e("h1").heading= heading
