@@ -1,0 +1,30 @@
+extends ./contains/default
+
+block vars
+    - const title="Portfolio"
+    - const layout="portfolio"
+    - const theme="dark"
+
+block content
+    include ../blocks/header/header
+
+    include ../blocks/heading-page/heading-page
+    +heading-page({
+        tag: "h1",
+        content: "Последние проекты"
+    }, {
+        tag: "p",
+        content: "Работаем с амбициозными брендами и людьми и создаём что-то великое вместе"
+    })
+
+    include ../blocks/recent-works/recent-works
+    +recent-works(false, "Загрузить еще")
+
+    include ../blocks/next-page/next-page
+    +next-page({
+        overHeading: "Далее",
+        heading: "Услуги",
+        description: false
+    })
+
+    include ../blocks/footer/footer
