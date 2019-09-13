@@ -1,0 +1,72 @@
+include ../../core/bemto
+
+mixin slide(content, customer)
+    - var background = customer.thumbnail.x1 + " 1x, " + customer.thumbnail.x2 + " 2x"
+
+    +e.slide
+        +e("p").message= content
+        +e.footer
+            +e.customer
+                +e.thumbnail.lazyload(data-bgset=background)
+                +e.infromation
+                    +e("h4").username= customer.username
+                    +e("p").role= customer.role
+
+            +e("a")(href="#").more Читать отзыв полностью
+
++b("section").clients-carousel
+    +e.wrapper
+        +e("h3").heading Клиенты
+        +e.grid
+            +e.row
+                +e("a")(href="#" style="max-width: 144px;").company
+                    +e("img")(src="images/clients-carousel/rosneft/rosneft.svg" alt="Роснефть")
+
+                +e("a")(href="#" style="max-width: 61px;").company
+                    +e("img")(src="images/clients-carousel/garant-kapital/garant-kapital.png" srcset="images/clients-carousel/garant-kapital/garant-kapital@2x.png" alt="Грант Капитал")
+
+                +e("a")(href="#" style="max-width: 176px;").company
+                    +e("img")(src="images/clients-carousel/u-modno/u-modno.png" srcset="images/clients-carousel/u-modno/u-modno@2x.png" alt="Улыбаться модно!")
+
+                +e("a")(href="#" style="max-width: 166px;").company
+                    +e("img")(src="images/clients-carousel/leningrad-life/leningrad-life.png" srcset="images/clients-carousel/leningrad-life/leningrad-life@2x.png" alt="Leningrad Life")
+
+            +e.row
+                +e("a")(href="#" style="max-width: 98px;").company
+                    +e("img")(src="images/clients-carousel/saintp-hustle/saintp-hustle.png" srcset="images/clients-carousel/saintp-hustle/saintp-hustle@2x.png" alt="SaintP Hustle")
+
+                +e("a")(href="#" style="max-width: 153px;").company
+                    +e("img")(src="images/clients-carousel/lsm/lsm.png" srcset="images/clients-carousel/lsm/lsm@2x.png" alt="LSM")
+
+                +e("a")(href="#" style="max-width: 135px;").company
+                    +e("img")(src="images/clients-carousel/lord/lord.png" srcset="images/clients-carousel/lord/lord@2x.png" alt="Князь")
+
+                +e("a")(href="#" style="max-width: 180px;").company
+                    +e("img")(src="images/clients-carousel/len-stoi-trest/len-stoi-trest.png" srcset="images/clients-carousel/len-stoi-trest/len-stoi-trest@2x.png" alt="Ленстройтрест")
+
+        +e.container
+            +e.slider
+                +slide("Clay functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time.", {
+                    thumbnail: {
+                        x1: "images/clients-carousel/customers/daniil-fetisov/daniil-fetisov.jpg",
+                        x2: "images/clients-carousel/customers/daniil-fetisov/daniil-fetisov@2x.jpg"
+                    },
+                    username: "Даниил Фетисов",
+                    role: "Молодой Малевич"
+                })
+
+                +slide("Очень довольны сотрудничеством. Было сделано быстро, и при этом без проблем и багов в конечном проекте. Ответственный исполнитель, в дальнейшем постараемся обращаться к Никите при решении подобных задач.", {
+                    thumbnail: {
+                        x1: "images/clients-carousel/customers/nikita-kostrov/nikita-kostrov.jpg",
+                        x2: "images/clients-carousel/customers/nikita-kostrov/nikita-kostrov@2x.jpg"
+                    },
+                    username: "Никита Козлов",
+                    role: "Молодой Трезини"
+                })
+
+            +e.controls
+                +e("button")(type="button").control._prev
+                    i.icon-arrow-left
+
+                +e("button")(type="button").control._next
+                    i.icon-arrow-right
