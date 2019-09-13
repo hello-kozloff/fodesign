@@ -1,0 +1,78 @@
+@import "../../sass/_mixins/transition"
+@import "../../sass/variables"
+@import "../../sass/smart-grid"
+
+.footer
+  padding: 28px 0 148px 0
+
+  &__wrapper
+    @include wrapper()
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__copyright
+    margin: 0
+
+    font-size: 12px
+    line-height: 150%
+    letter-spacing: 0.25px
+
+  &__navigation
+    display: flex
+    align-items: center
+
+  &__route
+    font-size: 14px
+    font-weight: 600
+    line-height: 170%
+
+    text-decoration: none
+    outline: none
+
+    &:not(:last-child)
+      margin-right: 40px
+
+    @include transition()
+
+  &__menu
+    display: flex
+    align-items: center
+
+  &__link
+    font-size: 12px
+    line-height: 150%
+    letter-spacing: 0.25px
+
+    text-decoration: none
+    outline: none
+
+    @include transition()
+
+    &:not(:first-child)
+      margin-left: 37px
+
+.page_theme_dark
+  .footer
+    background-color: $c-black
+
+    &__copyright
+      color: rgba($c-white, .25)
+
+    &__route
+      color: $c-white
+
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue
+
+    &__link
+      color: rgba($c-white, .25)
+
+      &:hover,
+      &:focus
+        color: $c-white
