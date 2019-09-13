@@ -32,6 +32,13 @@
     text-decoration: none
     outline: none
 
+    &:hover .header__logo,
+    &:focus .header__logo
+      fill: $c-orange
+
+      &:active .header__logo
+        fill: $c-blue
+
   &__logo
     width: 16px
     height: 24px
@@ -111,14 +118,6 @@
 //- Theming
 .page_theme_dark
   .header
-    &__home
-      &:hover .header__logo,
-      &:focus .header__logo
-        fill: $c-orange
-
-      &:active .header__logo
-        fill: $c-blue
-
     &__logo
       fill: $c-white
 
@@ -147,3 +146,34 @@
       &:active
         background: rgba($c-white, .15)
     //- header__buttons - wrapper end
+
+.page_theme_light
+  .header
+    &__logo
+      fill: $c-black
+
+    &__sitename
+      color: $c-black
+
+    &__description
+      color: rgba($c-black, .25)
+
+      &:before
+        background-color: rgba($c-black, .1)
+
+    //- header__buttons - wrapper
+    &__button
+      color: $c-black
+      background: rgba($c-black, .05)
+
+      &_hamburger
+        > span
+          background: $c-black
+
+      &:hover,
+      &:focus
+        background: rgba($c-black, .1)
+
+      &:active
+        background: rgba($c-black, .15)
+//- header__buttons - wrapper end
