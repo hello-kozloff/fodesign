@@ -127,7 +127,8 @@ gulp.task("build:vendor-style", () => {
   };
 
   return gulp.src([
-    "node_modules/normalize.css/normalize.css"
+    "node_modules/normalize.css/normalize.css",
+    "node_modules/flickity-fade/flickity-fade.css"
   ])
     .pipe(contact("vendor.css"))
     .pipe(gulp.dest("static/css"))
@@ -184,6 +185,9 @@ gulp.task("build:vendors-script", () => {
     "node_modules/jquery/dist/jquery.js",
     "node_modules/lazysizes/lazysizes.min.js",
     "node_modules/lazysizes/plugins/bgset/ls.bgset.min.js",
+    "node_modules/flickity/dist/flickity.pkgd.js",
+    "node_modules/flickity-fade/flickity-fade.js",
+    "node_modules/imagesloaded/imagesloaded.pkgd.js"
   ])
     .pipe(contact("vendor.js"))
     .pipe(gulp.dest("static/js"))
