@@ -83,6 +83,9 @@
 
       margin-right: 15px
       display: block
+
+    @media (max-width: $break_smallTablet)
+      display: none
   //- header__content - wrapper end
 
   //- header__buttons - wrapper
@@ -106,6 +109,10 @@
 
     @include transition()
 
+    &_themefy
+      @media (max-width: $break_smallTablet)
+        display: none
+
     &_hamburger
       span
         width: 4px
@@ -121,7 +128,16 @@
 
         @include transition()
 
-  //- header__buttons - wrapper end
+    @media (max-width: $break_smallTablet)
+      width: 50px
+      height: 50px
+
+  @media (max-width: $break_smallTablet)
+    position: absolute
+    height: auto
+    padding: 30px 0
+
+//- header__buttons - wrapper end
 
 //- Theming
 .page_theme_dark
