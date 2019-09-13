@@ -14,4 +14,13 @@ $(document).ready(() => {
                 .addClass('page_theme_light');
         }
     });
+
+    $(".header__button_hamburger").on("click", function(event) {
+        event.preventDefault();
+
+        const _navigation = $(".navigation");
+        _navigation.toggleClass("navigation_hidden");
+
+        $("body").addClass("fixed");
+    });
 });

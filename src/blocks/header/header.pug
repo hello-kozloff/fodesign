@@ -1,20 +1,23 @@
 include ../../core/bemto
 
 +b("header").header
-    +e.content
-        +e("a")(href="#").home
-            +e("svg").logo
-                polygon(points="0,0 8,8 0,8 8,16 0,16 8,24 8,16 16,16 8,8 16,8 16,0")
+    +e.grid
+        +e.content
+            +e("a")(href="#").home
+                +e("svg").logo
+                    polygon(points="0,0 8,8 0,8 8,16 0,16 8,24 8,16 16,16 8,8 16,8 16,0")
 
-            +e("span").sitename fo.design
+                +e("span").sitename fo.design
 
-        +e("p").description Дизайн студия Андрея Фомина
+            +e("p").description Дизайн студия Андрея Фомина
 
-    +e.buttons
-        +e("button")(type="button").button._themefy
-            i(class="icon-night")
+        +e.buttons
+            +e("button")(type="button").button._themefy
+                i(class="icon-night")
 
-        +e("button")(type="button").button_hamburger
-            span
-            span
-            span
+            +e("button")(type="button").button._hamburger
+                span
+                span
+                span
+
+    include ../../blocks/navigation/navigation

@@ -16,11 +16,11 @@
   height: 60px
   padding: 40px 0
 
-  @include wrapper()
-
-  display: flex
-
   //- header__content - wrapper
+  &__grid
+    display: flex
+    @include wrapper()
+
   &__content,
   &__buttons
     display: flex
@@ -40,6 +40,9 @@
         fill: $c-blue
 
   &__logo
+    position: relative
+    z-index: 9999999
+
     width: 16px
     height: 24px
 

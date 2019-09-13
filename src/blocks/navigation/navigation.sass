@@ -1,0 +1,196 @@
+@import "../../sass/_mixins/transition"
+@import "../../sass/_mixins/reset-button"
+@import "../../sass/_mixins/visually-hidden"
+@import "../../sass/variables"
+@import "../../sass/smart-grid"
+
+.navigation
+  position: fixed
+  z-index: 10000
+
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+  width: 100%
+  height: 100vh
+
+  margin: auto
+
+  transition: 500ms ease-out
+  opacity: 1
+
+  &_hidden
+    opacity: 0
+    left: -150%
+
+    @include visually-hidden()
+
+  &__wrapper
+    position: relative
+
+    width: calc(100% - 530px)
+    height: 100%
+
+    padding: 140px 0 60px 0
+    box-sizing: border-box
+
+    background-color: #050508
+
+  &__content
+    max-width: 930px
+    width: 100%
+    height: 100%
+
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    margin: 0 auto
+
+  &__button
+    position: absolute
+    right: -100px
+
+    width: 60px
+    height: 60px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    font-size: 24px
+    border-radius: 50%
+
+    @include transition()
+    @include rest-button()
+
+  &__heading
+    margin: 0 0 80px 0
+
+    font-size: 44px
+    font-weight: 500
+    line-height: 145%
+
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__item
+    display: inline-block
+
+    text-decoration: none
+    outline: none
+
+    &:not(:last-child)
+      margin-bottom: 40px
+
+    &:hover,
+    &:focus
+      .navigation__title
+        color: $c-orange
+
+    &:active
+      .navigation__title
+        color: $c-blue
+
+  &__title
+    display: block
+
+    font-size: 20px
+    font-weight: 500
+    line-height: 180%
+
+    @include transition()
+
+  &__sub-title
+    display: block
+
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+  &__contacts
+    margin-top: auto
+
+    display: flex
+    align-items: center
+
+  &__contact
+    font-size: 14px
+    font-weight: 600
+    line-height: 170%
+
+    text-decoration: none
+    outline: none
+
+    @include transition()
+
+    &:not(:last-child)
+      margin-right: 40px
+
+.page_theme_dark
+  .navigation
+    &__button
+      color: $c-white
+      background-color: rgba($c-white, .05)
+
+      &:hover,
+      &:focus
+        background-color: rgba($c-white, .1)
+
+      &:active
+        background-color: rgba($c-white, .15)
+
+    &__heading
+      color: $c-white
+
+    &__sub-title
+      color: rgba($c-white, .5)
+
+    &__title
+      color: $c-white
+
+    &__contact
+      color: $c-white
+
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue
+
+.page_theme_light
+  .navigation
+    &__button
+      color: $c-black
+      background-color: rgba($c-black, .05)
+
+      &:hover,
+      &:focus
+        background-color: rgba($c-black, .1)
+
+      &:active
+        background-color: rgba($c-black, .15)
+
+    &__heading
+      color: $c-black
+
+    &__sub-title
+      color: rgba($c-black, .5)
+
+    &__title
+      color: $c-black
+
+    &__contact
+      color: $c-black
+
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue

@@ -1,0 +1,29 @@
+include ../../core/bemto
+
+mixin item(title, subTitle=false)
+    +e("a")(href="#").item
+        +e("span").title= title
+
+        if (subTitle !== false)
+            +e("span").sub-title= subTitle
+
++b("div").navigation._hidden
+    +e.wrapper
+        +e.content
+            +e("button")(type="button").button
+                i(class="icon-slose")
+
+            +e("h4").heading Меню
+
+            +e("nav").container
+                +item("Главная")
+                +item("Проекты", "Все проекты")
+                +item("Услуги")
+                +item("Студия", "Сотрудничество")
+                +item("Контакты", "Заполнить бриф")
+
+            +e("nav").contacts
+                +e("a")(href="#").contact Behance
+                +e("a")(href="#").contact Dribbble
+                +e("a")(href="#").contact Instagram
+                +e("a")(href="#").contact ВКонтакте
