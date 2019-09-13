@@ -16,6 +16,8 @@
   height: 60px
   padding: 40px 0
 
+  pointer-events: none
+
   //- header__content - wrapper
   &__grid
     display: flex
@@ -31,6 +33,8 @@
     display: inline-block
     text-decoration: none
     outline: none
+
+    pointer-events: auto
 
     &:hover .header__logo,
     &:focus .header__logo
@@ -84,6 +88,7 @@
   //- header__buttons - wrapper
   &__buttons
     margin-left: auto
+    pointer-events: auto
 
   &__button
     width: 60px
