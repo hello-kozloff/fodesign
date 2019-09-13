@@ -1,3 +1,5 @@
+@import "_mixins/transition"
+
 @import "variables"
 @import "fonts"
 @import "icomoon"
@@ -5,6 +7,9 @@
 
 @import "_themes/dark"
 @import "_themes/light"
+
+*
+  @include transition()
 
 body
   margin: 0
