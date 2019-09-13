@@ -1,0 +1,193 @@
+@import "../../sass/_mixins/transition"
+@import "../../sass/_mixins/reset-button"
+@import "../../sass/variables"
+@import "../../sass/smart-grid"
+
+.page_theme_dark
+  .services
+    &__service:after
+      background-color: rgba($c-white, .1)
+
+    &__category
+      color: rgba($c-white, .75)
+
+    &__button
+      color: $c-white
+      background-color: rgba($c-white, .05)
+
+      &:hover,
+      &:focus
+        background-color: rgba($c-white, .1)
+
+      &:active
+        background-color: rgba($c-white, .15)
+
+    &__heading
+      color: $c-white
+
+    &__price
+      color: rgba($c-white, .75)
+
+.page_theme_light
+  .services
+    &__service:after
+      background-color: rgba($c-black, .1)
+
+    &__category
+      color: rgba($c-black, .75)
+
+    &__button
+      color: $c-black
+      background-color: rgba($c-black, .05)
+
+      &:hover,
+      &:focus
+        background-color: rgba($c-black, .1)
+
+      &:active
+        background-color: rgba($c-black, .15)
+
+    &__heading
+      color: $c-black
+
+    &__price
+      color: rgba($c-black, .75)
+
+.services
+  margin-bottom: 260px
+
+  &__group:not(:last-child)
+    margin-bottom: 160px
+
+  &__service
+    position: relative
+    overflow: hidden
+
+    &_show
+      background-color: $c-blue
+
+      .services__category
+        color: rgba($c-white, .75)
+
+      .services__button
+        color: $c-white
+        background-color: rgba($c-white, .05)
+
+        &:hover,
+        &:focus
+          background-color: rgba($c-white, .1)
+
+        &:active
+          background-color: rgba($c-white, .15)
+
+      .services__heading
+        color: $c-white
+
+      .services__hidden
+        display: block
+
+      .services__price
+        color: rgba($c-white, .75)
+
+    &:after
+      content: ""
+
+      position: absolute
+
+      left: 0
+      right: 0
+      bottom: 0
+
+      z-index: 10
+
+      max-width: 1160px
+      width: 100%
+      height: 1px
+
+      display: block
+      margin: 0 auto
+      background: red
+
+  &__service
+    padding: 40px 0
+
+  &__wrapper
+    max-width: 1160px
+    margin: 0 auto
+    @include wrapper-full()
+
+    display: flex
+
+  &__category
+    max-width: 300px
+    width: 100%
+
+    display: block
+    flex-shrink: 0
+
+    padding-right: 30px
+    box-sizing: border-box
+
+    font-size: 20px
+    font-weight: 500
+    line-height: 180%
+
+  &__content
+    position: relative
+
+    max-width: 860px
+    width: 100%
+
+  &__button
+    position: absolute
+    top: 0
+    right: 0
+
+    width: 60px
+    height: 60px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    border-radius: 50%
+
+    @include transition()
+    @include rest-button()
+
+  &__heading
+    margin: 0
+
+    font-size: 32px
+    font-weight: 500
+    line-height: 180%
+
+  &__price
+    display: block
+
+    font-size: 20px
+    font-weight: 500
+    line-height: 180%
+
+  &__hidden
+    display: none
+
+  &__description
+    max-width: 710px
+    margin: 20px 0 0 0
+
+    color: $c-white
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+  &__footer
+    margin-top: 60px
+
+  .button-has-icon
+    &__icon
+      color: $c-white
+      background-color: rgba($c-white, .1)
+
+    &__content
+      color: $c-white
