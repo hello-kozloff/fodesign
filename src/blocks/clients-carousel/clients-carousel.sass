@@ -6,6 +6,9 @@
 .clients-carousel
   padding: 240px 0
 
+  @media (max-width: $break_smallTablet)
+    padding: 80px 0
+
   &__wrapper
     max-width: 1160px
     margin: 0 auto
@@ -18,8 +21,14 @@
     font-weight: 500
     line-height: 180%
 
+    @media (max-width: $break_smallTablet)
+      text-align: center
+
   &__grid
     margin-top: 100px
+
+    @media (max-width: $break_smallTablet)
+      margin-top: 40px
 
   &__row
     display: flex
@@ -28,6 +37,17 @@
 
     &:not(:last-child)
       margin-bottom: 115px
+
+      @media (max-width: $break_smallTablet)
+        margin-bottom: 0
+
+    @media (max-width: $break_smallTablet)
+      flex-wrap: wrap
+      align-items: center
+      justify-content: center
+
+      &:last-child
+        display: none
 
   &__company
     display: inline-block
@@ -43,9 +63,15 @@
     &:focus
       opacity: .5
 
+    @media (max-width: $break_smallTablet)
+      margin: 0 30px 30px 30px
+
   &__container
     position: relative
     margin-top: 110px
+
+    @media (max-width: $break_smallTablet)
+      margin-top: 30px
 
   &__slider
     position: relative
@@ -60,6 +86,12 @@
 
     &:focus
       opacity: .7
+
+    @media (max-width: $break_mediumDesktop)
+      max-width: 800px
+
+    @media (max-width: $break_desktop)
+      max-width: 100%
 
   &__slide
     width: 100%
@@ -76,14 +108,27 @@
 
     text-indent: 140px
 
+    @media (max-width: $break_desktop)
+      text-indent: 0
+      text-align: center
+
+    @media (max-width: $break_smallTablet)
+      font-size: 18px
+
   &__footer
     display: flex
     align-items: center
     justify-content: space-between
 
+    @media (max-width: $break_smallTablet)
+      flex-direction: column
+
   &__customer
     display: flex
     align-items: center
+
+    @media (max-width: $break_smallTablet)
+      margin-bottom: 60px
 
   &__thumbnail
     width: 60px
@@ -121,6 +166,9 @@
     outline: none
     @include transition
 
+    @media (max-width: $break_smallTablet)
+      margin-bottom: 30px
+
   &__controls
     position: absolute
     right: 0
@@ -128,6 +176,12 @@
 
     display: flex
     align-items: center
+
+    @media (max-width: $break_desktop)
+      margin-top: 15px
+
+      position: initial
+      justify-content: center
 
   &__control
     width: 60px

@@ -1,5 +1,6 @@
 @import "../../sass/_mixins/transition"
 @import "../../sass/variables"
+@import "../../sass/smart-grid"
 
 .button-explore
   display: inline-block
@@ -15,6 +16,9 @@
   outline: none
 
   @include transition()
+
+  @media (max-width: $break_smallTablet)
+    padding: 0 40px
 
 .page_theme_dark
   .button-explore
