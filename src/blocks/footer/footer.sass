@@ -12,6 +12,9 @@
     align-items: center
     justify-content: space-between
 
+    @media (max-width: $break_mediumDesktop)
+      flex-direction: column
+
   &__copyright
     margin: 0
 
@@ -22,6 +25,9 @@
   &__navigation
     display: flex
     align-items: center
+
+    @media (max-width: $break_mediumDesktop)
+      margin: 30px 0
 
   &__route
     font-size: 14px
