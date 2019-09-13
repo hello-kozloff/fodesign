@@ -1,0 +1,9 @@
+include ../../core/bemto
+include ../../blocks/section-header/section-header
+include ../../blocks/button-has-icon/button-has-icon
+
+mixin next-page(header)
+    +b("section").next-page
+        +e.content
+            +section-header(header.overHeading, header.heading, header.description)
+            +button-has-icon("icon-chevron-right", "Перейти на страницу")
