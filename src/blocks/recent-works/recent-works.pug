@@ -3,7 +3,7 @@ include ../../blocks/section-header/section-header
 include ../../blocks/button-explore/button-explore
 include ../../blocks/portfolio-item/portfolio-item
 
-mixin recent-works(hasHeader=true)
+mixin recent-works(hasHeader, buttonText)
     +b("section").recent-works
         if (hasHeader !== false)
             +section-header("Последние проекты", false, "Работаем с амбициозными брендами и людьми и создаём что-то великое вместе")
@@ -42,4 +42,4 @@ mixin recent-works(hasHeader=true)
                 )
 
         +e.footer
-            +button-explore("Смотреть все проекты")
+            +button-explore(buttonText)
