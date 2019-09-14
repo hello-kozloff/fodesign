@@ -6,4 +6,4 @@ mixin next-page(header)
     +b("section").next-page
         +e.content
             +section-header(header.overHeading, header.heading, header.description)
-            +button-has-icon("icon-chevron-right", "Перейти на страницу")
+            +button-has-icon(header.href, "icon-chevron-right", "Перейти на страницу")
