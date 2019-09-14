@@ -3,7 +3,7 @@
 .services-carousel {
   @media (max-width: $break_mediumDesktop) {
     &__overlay {
-      padding: 35px;
+      padding: 40px 20px;
     }
 
     &__category-slider > .flickity-page-dots {
@@ -61,8 +61,6 @@
     }
 
     .section-header {
-      text-align: center;
-
       &__heading {
         max-width: 100%;
         margin: 15px auto 0 auto;
@@ -77,9 +75,6 @@
 
     &__categories {
       margin-top: 15px;
-      width: 100%;
-
-      text-align: center;
     }
 
     &__item {
@@ -90,10 +85,6 @@
 
     &__category {
       font-size: 14px;
-    }
-
-    &__overlay {
-      text-align: center;
     }
 
     &__title {
