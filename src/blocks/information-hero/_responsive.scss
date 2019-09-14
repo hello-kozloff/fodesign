@@ -1,0 +1,51 @@
+@import "../../sass/smart-grid";
+
+.information-hero {
+  @media (max-width: $break_mediumDesktop) {
+    &__content {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $break_largeTablet) {
+    &__content {
+      margin: auto;
+    }
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__description {
+      text-align: center;
+      margin: 40px auto 0 auto;
+    }
+
+    &__button {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $break_smallTablet) {
+    height: auto;
+    max-height: none;
+    min-height: 100%;
+
+    padding-top: 80px + 60px;
+    margin-bottom: 40px;
+
+    &__content {
+      margin: 0 auto;
+    }
+
+    &__heading {
+      font-size: 28px;
+    }
+
+    &__description {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  }
+}
