@@ -12,9 +12,6 @@
     align-items: center
     justify-content: space-between
 
-    @media (max-width: $break_mediumDesktop)
-      flex-direction: column
-
   &__copyright
     margin: 0
 
@@ -22,18 +19,9 @@
     line-height: 150%
     letter-spacing: 0.25px
 
-    @media (max-width: $break_smallTablet)
-      order: 1
-
   &__navigation
     display: flex
     align-items: center
-
-    @media (max-width: $break_mediumDesktop)
-      margin: 30px 0
-
-    @media (max-width: $break_smallTablet)
-      flex-direction: column
 
   &__route
     font-size: 14px
@@ -46,23 +34,11 @@
     &:not(:last-child)
       margin-right: 40px
 
-      @media (max-width: $break_smallTablet)
-        margin-right: 0
-        margin-bottom: 15px
-
-        order: 0
-
     @include transition()
 
   &__menu
     display: flex
     align-items: center
-
-    @media (max-width: $break_smallTablet)
-      margin-top: 15px
-
-      flex-direction: column
-      order: 2
 
   &__link
     font-size: 12px
@@ -76,9 +52,6 @@
 
     &:not(:first-child)
       margin-left: 37px
-
-      @media (max-width: $break_smallTablet)
-        margin-left: 0
 
 .page_theme_dark
   .footer

@@ -13,9 +13,6 @@
   &__right
     width: 50%
 
-    @media (max-width: $break_mediumDesktop)
-      width: 100%
-
   &__left
     padding: 54px 170px 156px 0
     box-sizing: border-box
@@ -23,13 +20,6 @@
     .services-carousel__wrapper
       margin-left: auto
       padding-left: 15px
-
-      @media (max-width: $break_mediumDesktop)
-        margin: 0 auto
-        padding: 0 15px
-
-    @media (max-width: $break_mediumDesktop)
-      padding: 40px 0
 
   &__wrapper
     max-width: 600px
@@ -40,10 +30,6 @@
     flex-direction: column
     align-items: flex-start
 
-    @media (max-width: $break_mediumDesktop)
-      max-width: 100%
-      box-sizing: border-box
-
   .section-header
     &__heading
       max-width: 440px
@@ -51,15 +37,9 @@
       margin-top: 54px
       font-size: 44px
 
-      @media (max-width: $break_smallTablet)
-        font-size: 24px
-
     &__description
       margin-top: 20px
       font-size: 20px
-
-      @media (max-width: $break_smallTablet)
-        font-size: 18px
 
   &__categories
     margin: auto 0 0 0
@@ -67,14 +47,8 @@
 
     list-style: none
 
-    @media (max-width: $break_smallTablet)
-      margin-top: 40px
-
   &__item:not(:first-child)
     margin-top: 20px
-
-    @media (max-width: $break_smallTablet)
-      margin-top: 10px
 
   &__category
     font-size: 20px
@@ -85,9 +59,6 @@
 
     @include rest-button()
     @include transition()
-
-    @media (max-width: $break_smallTablet)
-      font-size: 16px
 
   &__right
     overflow: hidden
@@ -110,16 +81,10 @@
     &:focus
       opacity: .9
 
-    @media (max-width: $break_mediumDesktop)
-      min-height: 400px
-
   &__categories-slide,
   &__category-slide
     width: 100%
     height: 840px
-
-    @media (max-width: $break_mediumDesktop)
-      height: 400px
 
   &__category-slider .flickity-page-dots
     position: absolute
@@ -152,14 +117,6 @@
       &:not(:last-child)
         margin-right: 40px
 
-    @media (max-width: $break_mediumDesktop)
-      width: 100%
-
-      padding: 0 15px
-      bottom: 15px
-
-      justify-content: center
-
 
   &__category-slide
     background-position: center
@@ -174,9 +131,6 @@
 
     background: rgba(8, 9, 13, .85)
 
-    @media (max-width: $break_mediumDesktop)
-      padding: 15px
-
   &__title
     margin: 0
 
@@ -184,9 +138,6 @@
     font-size: 44px
     font-weight: 500
     line-height: 145%
-
-    @media (max-width: $break_smallTablet)
-      font-size: 24px
 
   &__text
     max-width: 560px
@@ -196,13 +147,6 @@
     font-size: 20px
     font-weight: 500
     line-height: 180%
-
-    @media (max-width: $break_smallTablet)
-      font-size: 18px
-
-  @media (max-width: $break_mediumDesktop)
-    height: auto
-    flex-direction: column
 
 .page_theme_dark
   .services-carousel

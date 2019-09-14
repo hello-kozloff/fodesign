@@ -11,46 +11,20 @@
   .section-header
     margin-bottom: 120px
 
-    @media (max-width: $break_smallTablet)
-      margin-bottom: 40px
-
     &__description
       max-width: 800px
       line-height: 140%
-
-      @media (max-width: $break_smallTablet)
-        font-size: 24px
-        margin-top: 20px
-
-  @media (max-width: $break_smallTablet)
-    padding: 80px 15px
 
   &__content
     display: flex
     flex-wrap: wrap
     justify-content: center
 
-    @media (max-width: $break_largeTablet)
-      flex-direction: column
-
   &__item
     margin-bottom: 40px
 
     &:not(:nth-child(2n + 2))
       margin-right: 40px
-
-      @media (max-width: $break_largeTablet)
-        margin-right: 0
-
-    @media (max-width: $break_mediumDesktop)
-      .portfolio-item
-        max-width: 460px
-
-    @media (max-width: $break_largeTablet)
-      margin-bottom: 15px
-
-      .portfolio-item
-        max-width: 100%
 
   &__footer
     margin-top: 60px - 40px
