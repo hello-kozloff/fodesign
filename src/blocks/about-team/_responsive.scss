@@ -14,15 +14,32 @@
   }
 
   @media (max-width: $break_smallTablet) {
+    &__wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .heading-page {
+      @include wrapper-full();
+
       &__heading {
         font-size: 24px;
       }
     }
 
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__person {
       width: 100%;
+      max-width: 320px;
       text-align: center;
+
+      &:last-child {
+        display: none;
+      }
     }
 
     &__thumbnail,
