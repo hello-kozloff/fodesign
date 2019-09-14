@@ -1,0 +1,57 @@
+@import "../../sass/smart-grid";
+
+.clients-carousel {
+  @media (max-width: $break_mediumDesktop) {
+    padding: 120px 0;
+
+    &__slider {
+      max-width: 800px;
+    }
+  }
+
+  @media (max-width: $break_largeTablet) {
+    &__slider {
+      max-width: 100%;
+    }
+
+    &__message {
+      text-indent: 0;
+      text-align: center;
+    }
+
+    &__footer {
+      flex-direction: column;
+    }
+
+    &__customer {
+      margin-bottom: 30px;
+    }
+
+    &__controls {
+      margin-top: 30px;
+
+      position: initial;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: $break_smallTablet) {
+    padding: 80px 0;
+
+    &__container {
+      margin-top: 25px;
+    }
+
+    &__grid {
+      display: none;
+    }
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__message {
+      font-size: 18px;
+    }
+  }
+}
