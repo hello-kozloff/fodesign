@@ -1,0 +1,23 @@
+extends ./contains/default
+
+block vars
+    - const title="About us"
+    - const layout="about-us"
+    - const theme="dark"
+
+block content
+    include ../blocks/header/header
+    include ../blocks/about-hero/about-hero
+    include ../blocks/services-carousel/services-carousel
+    include ../blocks/about-team/about-team
+    include ../blocks/clients-carousel/clients-carousel
+
+    include ../blocks/next-page/next-page
+    +next-page({
+        href: "contacts.html",
+        overHeading: "Далее",
+        heading: "Контакты",
+        description: false
+    })
+
+    include ../blocks/footer/footer

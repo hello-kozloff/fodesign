@@ -1,0 +1,38 @@
+@import "../../sass/smart-grid";
+
+.about-team {
+  @media (max-width: $break_mediumDesktop) {
+    &__person {
+      width: calc(100% / 3);
+    }
+  }
+
+  @media (max-width: $break_largeTablet) {
+    &__person {
+      width: calc(100% / 2);
+    }
+  }
+
+  @media (max-width: $break_smallTablet) {
+    .heading-page {
+      &__heading {
+        font-size: 24px;
+      }
+    }
+
+    &__person {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__thumbnail,
+    &__overlay {
+      height: 350px;
+    }
+
+    &__invite {
+      padding: 0 20px;
+      margin-bottom: 0;
+    }
+  }
+}
