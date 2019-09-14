@@ -6,15 +6,6 @@ $(document).ready(() => {
         button.on("click", function (event) {
             event.preventDefault();
 
-            $(".services__service")
-                .removeClass("services__service_show")
-                .addClass("services__service_hidden");
-
-            $(".services__button")
-                .find("i")
-                .removeClass("icon-minus")
-                .addClass("icon-plus");
-
             if (_this.hasClass("services__service_hidden")) {
                 _this
                     .removeClass("services__service_hidden")
