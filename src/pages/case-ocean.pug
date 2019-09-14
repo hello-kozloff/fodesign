@@ -1,0 +1,27 @@
+extends ./contains/default
+
+block vars
+    - const title="Case: Ocean"
+    - const layout="case"
+    - const theme="dark"
+
+block content
+    include ../blocks/header/header
+
+    include ../blocks/case-hero/case-hero
+    +case-hero({
+        heading: "Океан Бизнес-идей",
+        description: "Когда-то образование и профессию выбирали на всю жизнь.",
+        client: "Океан Бизнес-идей",
+        activity: "Дизайн UI/UX, брендинг и разработка"
+    })
+
+    include ../blocks/next-page/next-page
+    +next-page({
+        href: "case-vrpass.html",
+        overHeading: "Далее",
+        heading: "VR Pass",
+        description: false
+    })
+
+    include ../blocks/footer/footer
