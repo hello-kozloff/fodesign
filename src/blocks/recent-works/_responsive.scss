@@ -21,8 +21,16 @@
   }
 
   @media (max-width: $break_largeTablet) {
+    padding-left: 0;
+    padding-right: 0;
+
+    .section-header {
+      padding: 0 20px;
+    }
+
     &__item {
       width: 100%;
+      margin-bottom: 0;
 
       .portfolio-item {
         max-width: 100%;
@@ -31,6 +39,7 @@
 
         &__overlay {
           padding: 30px;
+          opacity: 1;
         }
 
         &__description {
@@ -40,12 +49,12 @@
 
       &:not(:last-child) {
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
       }
     }
 
     &__footer {
-      margin-top: 0;
+      margin-top: 20px;
     }
   }
 
