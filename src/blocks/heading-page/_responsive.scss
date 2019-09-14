@@ -1,0 +1,15 @@
+@import "../../sass/smart-grid";
+
+.heading-page {
+  @media (max-width: $break_largeTablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $break_smallTablet) {
+    margin-bottom: 40px;
+
+    &__heading {
+      font-size: 32px;
+    }
+  }
+}
