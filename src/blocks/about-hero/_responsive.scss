@@ -1,0 +1,47 @@
+@import "../../sass/smart-grid";
+
+.about-hero {
+  @media (max-width: $break_mediumDesktop) {
+    &__block {
+      height: 250px;
+    }
+  }
+
+  @media (max-width: $break_largeTablet) {
+    &__blocks {
+      flex-wrap: wrap;
+    }
+
+    &__block {
+      width: calc(50% - 7px);
+      margin-bottom: 7px;
+    }
+  }
+
+  @media (max-width: $break_smallTablet) {
+    .heading-page {
+      margin-bottom: 40px;
+
+      &__heading {
+        font-size: 26px;
+      }
+    }
+  }
+
+  @media (max-width: $break_phone) {
+    &__blocks {
+      flex-direction: column;
+    }
+
+    &__block {
+      width: 100%;
+      height: 180px;
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
