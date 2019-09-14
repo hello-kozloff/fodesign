@@ -1,7 +1,7 @@
 include ../../core/bemto
 
-mixin item(title, subTitle=false)
-    +e("a")(href="#").item
+mixin item(href, title, subTitle=false)
+    +e("a")(href=href).item
         +e("span").title= title
 
         if (subTitle !== false)
@@ -16,11 +16,11 @@ mixin item(title, subTitle=false)
             +e("h4").heading Меню
 
             +e("nav").container
-                +item("Главная")
-                +item("Проекты", "Все проекты")
-                +item("Услуги")
-                +item("Студия", "Сотрудничество")
-                +item("Контакты", "Заполнить бриф")
+                +item("index.html", "Главная")
+                +item("portfolio.html", "Портфолио", "Все проекты")
+                +item("services.html", "Услуги")
+                +item("#", "Студия", "Сотрудничество")
+                +item("#", "Контакты", "Заполнить бриф")
 
             +e("nav").contacts
                 +e("a")(href="#").contact Behance
