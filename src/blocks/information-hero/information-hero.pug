@@ -1,9 +1,10 @@
 include ../../core/bemto
 include ../../blocks/button-has-icon/button-has-icon
 
-+b("section").information-hero
-    +e.content
-        +e("h1").heading Делаем чистые, аккуратные сайты
-        +e("p").description Думаем о том, как правильно преподнести ваш бизнес, услуги, идеи
-        +e.button
-            +button-has-icon("#", "icon-chevron-right", "Избранные кейсы")
++b("section")(data-bgset="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80").information-hero.lazyload
+    +e.overlay
+        +e.content
+            +e("h1").heading Делаем чистые, аккуратные сайты
+            +e("p").description Думаем о том, как правильно преподнести ваш бизнес, услуги, идеи
+            +e.button
+                +button-has-icon("#", "icon-chevron-right", "Избранные кейсы")
