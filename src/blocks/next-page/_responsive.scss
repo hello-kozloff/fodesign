@@ -8,6 +8,12 @@
   @media (max-width: $break_largeTablet) {
     padding: 80px 0;
 
+    .section-header {
+      &__heading {
+        font-size: 36px;
+      }
+    }
+
     &__content {
       .button-has-icon {
         margin-top: 40px;
