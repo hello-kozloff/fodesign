@@ -252,7 +252,7 @@ gulp.task("build:smart-grid", () => {
     mobileFirst: false,
     container: {
       maxWidth: "1760px",
-      fields: "15px"
+      fields: "20px"
     },
     breakPoints: {
       largeDesktop: {
@@ -308,6 +308,7 @@ gulp.task("build:production", () => {
 gulp.task("watch", () => {
   gulp.watch("src/blocks/**/*.js", gulp.series(buildingScripts));
   gulp.watch("src/blocks/**/*.sass", gulp.series(buildingStyles));
+  gulp.watch("src/blocks/**/*.scss", gulp.series(buildingStyles));
   gulp.watch("src/blocks/**/*.pug", gulp.series("build-pages"));
   gulp.watch("src/sass/**/*.sass", gulp.series(buildingStyles));
   gulp.watch("src/pages/**/*.pug", gulp.series("build-pages"));
