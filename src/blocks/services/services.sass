@@ -3,36 +3,8 @@
 @import "../../sass/variables"
 @import "../../sass/smart-grid"
 
-.page_theme_dark
-  .services
-    &__service:after
-      background-color: rgba($c-white, .1)
-
-    &__category
-      color: rgba($c-white, .75)
-
-    &__button
-      color: $c-white
-      background-color: rgba($c-white, .05)
-
-      &:hover,
-      &:focus
-        background-color: rgba($c-white, .1)
-
-      &:active
-        background-color: rgba($c-white, .15)
-
-    &__heading
-      color: $c-white
-
-    &__price
-      color: rgba($c-white, .75)
-
 .page_theme_light
   .services
-    &__service:after
-      background-color: rgba($c-black, .1)
-
     &__category
       color: rgba($c-black, .75)
 
@@ -191,5 +163,35 @@
 
     &__content
       color: $c-white
+
+.page_theme_dark
+  .services
+    &__service:after
+      background-color: rgba($c-white, .1)
+
+    &__category
+      color: rgba($c-white, .75)
+
+    &__button
+      color: $c-white
+      background-color: rgba($c-white, .05)
+
+      &:hover,
+      &:focus
+        background-color: rgba($c-white, .1)
+
+      &:active
+        background-color: rgba($c-white, .15)
+
+    &__heading
+      color: $c-white
+
+    &__price
+      color: rgba($c-white, .75)
+
+.page_theme_light
+  .services
+    &__service:after
+      background-color: rgba($c-black, .1)
 
 @import "responsive"
