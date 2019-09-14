@@ -1,6 +1,6 @@
 $(document).ready(() => {
     $(".navigation").on('click', function(event) {
-        if (event.target !== this) return false;
+        if (event.target !== this) return;
 
         hideNavigationPanel();
     });
