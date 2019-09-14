@@ -1,0 +1,22 @@
+@import "../../sass/smart-grid";
+
+.portfolio-item {
+  @media (max-width: $break_largeTablet) {
+    &__heading {
+      font-size: 18px;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 180%;
+    }
+
+    &__tag {
+      font-size: 14px;
+
+      > i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
