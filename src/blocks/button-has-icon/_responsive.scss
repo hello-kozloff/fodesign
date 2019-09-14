@@ -1,14 +1,16 @@
 @import "../../sass/smart-grid";
 
 .button-has-icon {
-  &__icon {
-    left: 0;
+  @media (max-width: $break_smallTablet) {
+    &__icon {
+      left: 0;
 
-    width: 50px;
-    height: 50px;
-  }
+      width: 50px;
+      height: 50px;
+    }
 
-  &__content {
-    margin-left: 0;
+    &__content {
+      margin-left: 0;
+    }
   }
 }
