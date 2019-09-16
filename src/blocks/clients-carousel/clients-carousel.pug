@@ -1,6 +1,6 @@
 include ../../core/bemto
 
-mixin slide(content, customer)
+mixin slide(content, customer, route, string)
     - var background = customer.thumbnail.x1 + " 1x, " + customer.thumbnail.x2 + " 2x"
 
     +e.slide
@@ -12,7 +12,7 @@ mixin slide(content, customer)
                     +e("h4").username= customer.username
                     +e("p").role= customer.role
 
-            +e("a")(href="#").more Читать отзыв полностью
+            +e("a")(href=customer.route target="_blank").more= customer.string
 
 +b("section").clients-carousel
     +e.wrapper
@@ -46,22 +46,26 @@ mixin slide(content, customer)
 
         +e.container
             +e.slider
-                +slide("Clay functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time.", {
+                +slide('Рекомендую студию Андрея Фомина. Ребята настоящие профессионалы своего дела! Учли все пожелания: разработали логотип, сайт и запустили рекламу.', {
                     thumbnail: {
                         x1: "images/clients-carousel/customers/daniil-fetisov/daniil-fetisov.jpg",
                         x2: "images/clients-carousel/customers/daniil-fetisov/daniil-fetisov@2x.jpg"
                     },
-                    username: "Даниил Фетисов",
-                    role: "Молодой Малевич"
+                    username: "Дмитрий Михайлович",
+                    role: 'Владелец стоматологии "Улыбаться модно!"',
+                    route: "https://youtu.be/GAlI3ed_oec",
+                    string: "Смотреть видео-отзыв"
                 })
 
-                +slide("Clay functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time.", {
+                +slide("Обращался по вопросу аналитики аудитории с описанием конкурентов и производству сайтов визиток. Результат: цена лида упала в два раза. Рекомендую!", {
                     thumbnail: {
                         x1: "images/clients-carousel/customers/nikita-kostrov/nikita-kostrov.jpg",
                         x2: "images/clients-carousel/customers/nikita-kostrov/nikita-kostrov@2x.jpg"
                     },
-                    username: "Никита Козлов",
-                    role: "Молодой Трезини"
+                    username: "Степан Степанов",
+                    role: "Консалтинг в области коммерции",
+                    route: "https://youtu.be/OBYuBLdGjfE",
+                    string: "Смотреть видео-отзыв"
                 })
 
             +e.controls
