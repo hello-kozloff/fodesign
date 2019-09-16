@@ -1,0 +1,96 @@
+@import "../../sass/_mixins/transition"
+@import "../../sass/variables"
+@import "../../sass/smart-grid"
+
+.contacts-hero
+  padding-bottom: 80px
+
+  &__wrapper
+    max-width: 1160px
+    width: 100%
+    margin: 0 auto
+
+    @include wrapper-full()
+
+  &__grid
+    width: 100%
+
+    display: flex
+    align-items: flex-start
+
+  &__group
+    width: 100%
+
+    &:not(:last-child)
+      margin-right: 40px
+
+  &__inline
+    display: flex
+    align-items: center
+
+  &__item:not(:last-child)
+    margin-bottom: 40px
+
+  &__title
+    margin: 0 0 10px 0
+
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+  &__content
+    font-size: 20px
+    font-weight: 500
+    line-height: 180%
+
+    text-decoration: none
+    outline: none
+
+    @include transition()
+
+  &__line
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+    text-decoration: none
+    outline: none
+
+    @include transition()
+
+    &:not(:last-child)
+      margin-right: 30px
+
+  &__get-started
+    font-size: 32px
+    font-weight: 500
+    line-height: 180%
+
+    text-decoration: none
+    outline: none
+
+    @include transition()
+
+.page_theme_dark
+  .contacts-hero
+    &__title
+      color: rgba($c-white, .25)
+
+    &__get-started
+      color: $c-white
+
+    &__get-started,
+    &__content,
+    &__line
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue
+
+    &__content
+      color: $c-white
+
+    &__line
+      color: $c-white

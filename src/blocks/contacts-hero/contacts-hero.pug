@@ -1,0 +1,34 @@
+include ../../core/bemto
+include ../../blocks/heading-page/heading-page
+
++b("section").contacts-hero
+    +e.wrapper
+        +heading-page(false, {
+            tag: "h1",
+            content: "Хотите работать с нами?"
+        }, {
+            tag: "p",
+            content: "Любая ваша идея, мысль или проект осуществимы."
+        })
+
+        +e.grid
+            +e.group
+                +e.item
+                    +e("h5").title Напишите нам
+                    +e("a")(href="mailto:hello@fodesign.ru").content hello@fodesign.ru
+
+                +e.item
+                    +e("h5").title Напишите нам
+                    +e("a")(href="tel:+79773511095").content +7 (977) 351-10-95
+
+                +e.item
+                    +e("h5").title Используйте социальные сети
+                    +e.inline
+                        +e("a")(href="#").line Telegram
+                        +e("a")(href="#").line What’s App
+                        +e("a")(href="#").line VK
+
+            +e.group
+                +e.item
+                    +e("h5").title Новый проект?
+                    +e("a")(href="get-started.html").get-started Начать проект
