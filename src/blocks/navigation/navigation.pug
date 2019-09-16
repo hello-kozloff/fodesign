@@ -1,11 +1,11 @@
 include ../../core/bemto
 
-mixin item(href, title, subTitle=false)
-    +e("a")(href=href).item
-        +e("span").title= title
+mixin item(object)
+    +e.item
+        +e("a")(href=object[0].route).title= object[0].string
 
-        if (subTitle !== false)
-            +e("span").sub-title= subTitle
+        if (object[1] !== false)
+            +e("a")(href=object[1].route).sub-title= object[1].string
 
 +b("div").navigation._hidden
     +e.wrapper
@@ -17,11 +17,39 @@ mixin item(href, title, subTitle=false)
                 +e("h4").heading Меню
 
                 +e("nav").container
-                    +item("index.html", "Главная")
-                    +item("portfolio.html", "Портфолио", "Все проекты")
-                    +item("services.html", "Услуги")
-                    +item("about-us.html", "Студия", "Сотрудничество")
-                    +item("#", "Контакты", "Заполнить бриф")
+                    +item([{
+                        route: "index.html",
+                        string: "Главная"
+                    }, false])
+
+                    +item([{
+                        route: "favorite-projects.html",
+                        string: "Портфолио"
+                    }, {
+                        route: "portfolio.html",
+                        string: "Все проекты"
+                    }])
+
+                    +item([{
+                        route: "services.html",
+                        string: "Услуги"
+                    }, false])
+
+                    +item([{
+                        route: "about-us.html",
+                        string: "Студия"
+                    }, {
+                        route: "cooperation.html",
+                        string: "Сотрудничество"
+                    }])
+
+                    +item([{
+                        route: "contacts.html",
+                        string: "Контакты"
+                    }, {
+                        route: "get-started.html",
+                        string: "Заполнить бриф"
+                    }])
 
                 +e("nav").contacts
                     +e("a")(href="#").contact Behance

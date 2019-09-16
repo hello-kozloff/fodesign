@@ -99,21 +99,14 @@
     &:not(:last-child)
       margin-bottom: 40px
 
-    &:hover,
-    &:focus
-      .navigation__title
-        color: $c-orange
-
-    &:active
-      .navigation__title
-        color: $c-blue
-
   &__title
     display: block
 
     font-size: 20px
     font-weight: 500
     line-height: 180%
+
+    text-decoration: none
 
     @include transition()
 
@@ -123,6 +116,8 @@
     font-size: 16px
     font-weight: 500
     line-height: 200%
+
+    text-decoration: none
 
   &__contacts
     margin-top: 40px
@@ -168,6 +163,15 @@
     &__title
       color: $c-white
 
+    &__title,
+    &__sub-title
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue
+
     &__contact
       color: $c-white
 
@@ -199,6 +203,15 @@
 
     &__sub-title
       color: rgba($c-black, .5)
+
+    &__title,
+    &__sub-title
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue
 
     &__title
       color: $c-black
