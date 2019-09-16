@@ -12,8 +12,6 @@ $(document).ready(() => {
     $services.categories = $(".services-carousel__categories");
     $services.category = $(".services-carousel__item");
 
-    console.log($services.category)
-
     //- On click single category
     $services.category.on("click", function (event) {
         const idx = $(event.currentTarget).index();
