@@ -1,15 +1,17 @@
 @import "../../sass/smart-grid";
 
 .contacts-hero {
-  &__grid {
-    flex-direction: column;
+  @media (max-width: $break_largeTablet) {
+    &__grid {
+      flex-direction: column;
 
-    &:not(:last-child) {
-      margin-right: 0;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
-  }
 
-  &__group:last-child {
-    margin-top: 40px;
+    &__group:last-child {
+      margin-top: 40px;
+    }
   }
 }
