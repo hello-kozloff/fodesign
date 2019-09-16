@@ -1,10 +1,12 @@
 include ../../core/bemto
 include ../../blocks/button-has-icon/button-has-icon
 
-+b("section")(data-bgset="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80").information-hero.lazyload
++b("section").information-hero
     +e.overlay
         +e.content
             +e("h1").heading Делаем чистые, аккуратные сайты
             +e("p").description Думаем о том, как правильно преподнести ваш бизнес, услуги, идеи
             +e.button
                 +button-has-icon("portfolio.html", "icon-chevron-right", "Избранные кейсы")
+
+    +e("video")(src="images/information-hero/background.mp4" width="100%" height="950vh" muted loop autoplay).background
