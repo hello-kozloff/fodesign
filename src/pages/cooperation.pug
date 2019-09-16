@@ -1,0 +1,21 @@
+extends ./contains/default
+
+block vars
+    - const title="fodesign / Дизайн студия Андрея Фомина / Сотрудничество"
+    - const layout="cooperation"
+    - const theme="dark"
+
+block content
+    include ../blocks/header/header
+
+    include ../blocks/cooperation-hero/cooperation-hero
+
+    include ../blocks/next-page/next-page
+    +next-page({
+        href: "contacts.html",
+        overHeading: "Далее",
+        heading: "Контакты",
+        description: false
+    })
+
+    include ../blocks/footer/footer
