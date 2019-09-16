@@ -10,10 +10,10 @@ html(lang="ru")
         title #{title}
 
         link(href="css/bundle.min.css" rel="stylesheet")
-    body
+    body(class="page_theme_" + theme)
         include ../../core/bemto
 
-        +b(class="page_layout_" + layout + " _theme_" + theme)
+        +b(class="page_layout_" + layout)
             block content
 
         script(src="js/bundle.min.js")

@@ -2,7 +2,7 @@ $(document).ready(() => {
     $(".header__button_themefy").on("click", function(event) {
         event.preventDefault();
 
-        const _this = $('.page');
+        const _this = $('body');
 
         if (_this.hasClass('page_theme_light')) {
             _this
