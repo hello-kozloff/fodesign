@@ -1,0 +1,15 @@
+@import "../../sass/smart-grid";
+
+.contacts-hero {
+  &__grid {
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  &__group:last-child {
+    margin-top: 40px;
+  }
+}

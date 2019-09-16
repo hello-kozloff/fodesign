@@ -5,10 +5,15 @@
 .contacts-hero
   padding-bottom: 80px
 
+  .heading-page
+    padding-left: 0
+    padding-right: 0
+
   &__wrapper
     max-width: 1160px
     width: 100%
     margin: 0 auto
+    box-sizing: border-box
 
     @include wrapper-full()
 
@@ -94,3 +99,5 @@
 
     &__line
       color: $c-white
+
+@import "responsive"
