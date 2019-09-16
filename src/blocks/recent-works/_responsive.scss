@@ -2,7 +2,8 @@
 
 .recent-works {
   @media (max-width: $break_mediumDesktop) {
-    padding: 80px 20px;
+    margin: 80px 0;
+    padding: 0 20px;
 
     .section-header {
       margin-bottom: 80px;

@@ -2,7 +2,7 @@
 
 .clients-carousel {
   @media (max-width: $break_mediumDesktop) {
-    padding: 120px 0;
+    margin: 120px 0;
 
     &__slider {
       max-width: 800px;
@@ -36,7 +36,7 @@
   }
 
   @media (max-width: $break_smallTablet) {
-    padding: 80px 0;
+    margin: 80px 0;
 
     &__container {
       margin-top: 25px;
