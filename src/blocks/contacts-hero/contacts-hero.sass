@@ -100,4 +100,28 @@
     &__line
       color: $c-white
 
+.page_theme_light
+  .contacts-hero
+    &__title
+      color: rgba($c-black, .25)
+
+    &__get-started
+      color: $c-black
+
+    &__get-started,
+    &__content,
+    &__line
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue
+
+    &__content
+      color: $c-black
+
+    &__line
+      color: $c-black
+
 @import "responsive"
