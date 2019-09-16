@@ -21,90 +21,22 @@ mixin category-slide(images, title, text)
 
     +e.right
         +e.categories-slider
-            +e.categories-slide
-                +e.category-slider
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Стратегия 1", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
+            +e.category-slide.lazyload(data-bgset="images/services-carousel/design/thumbnail.jpg")
+                +e.overlay
+                    +e("h4").title Заголовок 1
+                    +e("p").text Под-заголовок
 
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Стратегия 2", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
+            +e.category-slide.lazyload(data-bgset="images/services-carousel/design/thumbnail.jpg")
+                +e.overlay
+                    +e("h4").title Заголовок 2
+                    +e("p").text Под-заголовок
 
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Стратегия 3", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
+            +e.category-slide.lazyload(data-bgset="images/services-carousel/design/thumbnail.jpg")
+                +e.overlay
+                    +e("h4").title Заголовок 3
+                    +e("p").text Под-заголовок
 
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Стратегия 4", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-            +e.categories-slide
-                +e.category-slider
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Дизайн 1", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Дизайн 2", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Дизайн 3", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Дизайн 4", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-            +e.categories-slide
-                +e.category-slider
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Разработка 1", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Разработка 2", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Разработка 3", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Разработка 4", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-            +e.categories-slide
-                +e.category-slider
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Реклама 1", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Реклама 2", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Реклама 3", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
-
-                    +category-slide({
-                        x1: "images/services-carousel/design/thumbnail.jpg",
-                        x2: "images/services-carousel/design/thumbnail@2x.jpg"
-                    }, "Реклама 4", "Мы не рисуем картинки, мы решаем проблемы. Только так появляется хороший дизайн.")
+            +e.category-slide.lazyload(data-bgset="images/services-carousel/design/thumbnail.jpg")
+                +e.overlay
+                    +e("h4").title Заголовок 4
+                    +e("p").text Под-заголовок

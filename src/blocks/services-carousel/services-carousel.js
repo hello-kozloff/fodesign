@@ -42,11 +42,3 @@ $(document).ready(() => {
         });
     });
 });
-
-$(document).ready(() => {
-    $(".services-carousel__category-slider").flickity({
-        pageDots: true,
-        draggable: false,
-        prevNextButtons: false
-    });
-});
