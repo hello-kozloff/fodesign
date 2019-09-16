@@ -9,21 +9,22 @@ mixin item(href, title, subTitle=false)
 
 +b("div").navigation._hidden
     +e.wrapper
-        +e.content
-            +e("button")(type="button").button
-                i(class="icon-slose")
+        +e.scroll
+            +e.content
+                +e("button")(type="button").button
+                    i(class="icon-slose")
 
-            +e("h4").heading Меню
+                +e("h4").heading Меню
 
-            +e("nav").container
-                +item("index.html", "Главная")
-                +item("portfolio.html", "Портфолио", "Все проекты")
-                +item("services.html", "Услуги")
-                +item("about-us.html", "Студия", "Сотрудничество")
-                +item("#", "Контакты", "Заполнить бриф")
+                +e("nav").container
+                    +item("index.html", "Главная")
+                    +item("portfolio.html", "Портфолио", "Все проекты")
+                    +item("services.html", "Услуги")
+                    +item("about-us.html", "Студия", "Сотрудничество")
+                    +item("#", "Контакты", "Заполнить бриф")
 
-            +e("nav").contacts
-                +e("a")(href="#").contact Behance
-                +e("a")(href="#").contact Dribbble
-                +e("a")(href="#").contact Instagram
-                +e("a")(href="#").contact ВКонтакте
+                +e("nav").contacts
+                    +e("a")(href="#").contact Behance
+                    +e("a")(href="#").contact Dribbble
+                    +e("a")(href="#").contact Instagram
+                    +e("a")(href="#").contact ВКонтакте
