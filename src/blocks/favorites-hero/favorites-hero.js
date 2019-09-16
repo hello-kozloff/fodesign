@@ -6,7 +6,8 @@ $(document).ready(() => {
         pageDots: false,
         draggable: false,
         prevNextButtons: false,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        wrapAround: true
     });
 
     //- Get slide count
