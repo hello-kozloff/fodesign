@@ -1,0 +1,20 @@
+extends ./contains/default
+
+block vars
+    - const title="fodesign / Дизайн студия Андрея Фомина / Контакты"
+    - const layout="contacts"
+    - const theme="dark"
+
+block content
+    include ../blocks/header/header
+    include ../blocks/contacts-hero/contacts-hero
+
+    include ../blocks/next-page/next-page
+    +next-page({
+        href: "get-started.html",
+        overHeading: "Далее",
+        heading: "Начать проект",
+        description: false
+    })
+
+    include ../blocks/footer/footer
