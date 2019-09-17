@@ -1,0 +1,81 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+.about-team
+  .heading-page
+    padding-left: 0
+    padding-right: 0
+
+  &__wrapper
+    max-width: 1460px
+    width: 100%
+    margin: 0 auto
+    box-sizing: border-box
+
+    @include wrapper-full()
+
+  &__container
+    display: flex
+    flex-wrap: wrap
+
+  &__person
+    width: calc(100% / 4)
+    margin-bottom: 50px
+
+  &__thumbnail
+    width: 100%
+    height: 490px
+
+    background-color: #08090D
+    background-size: cover
+    background-position: center
+
+  &__overlay
+    width: 100%
+    height: 490px
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  &__content
+    padding: 20px 40px 0 40px
+    box-sizing: border-box
+
+  &__username
+    margin: 0
+
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+  &__role
+    margin: 0
+
+    font-size: 14px
+    font-weight: 600
+    line-height: 170%
+
+  &__invite
+    margin: 0 0 35px 0
+
+    font-size: 20px
+    font-weight: 500
+    line-height: 180%
+
+    text-align: center
+
+.page_theme_dark
+  .about-team
+    &__username
+      color: $c-white
+
+    &__role
+      color: rgba($c-white, .5)
+
+    &__invite
+      color: $c-white
+
+@import "responsive"

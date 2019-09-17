@@ -6,7 +6,7 @@ block vars
     - const theme="dark"
 
 block content
-    include ../blocks/header/header
+    include ../blocks/_parts/header/header
     +header({
         themefy: true,
         hamburger: true
@@ -18,9 +18,9 @@ block content
         content: "Услуги"
     })
 
-    include ../blocks/services/services
+    include ../blocks/_sections/services/services
 
-    include ../blocks/next-page/next-page
+    include ../blocks/_sections/next-page/next-page
     +next-page({
         href: "portfolio.html",
         overHeading: "Далее",
@@ -28,4 +28,4 @@ block content
         description: false
     })
 
-    include ../blocks/footer/footer
+    include ../blocks/_parts/footer/footer

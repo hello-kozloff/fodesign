@@ -6,18 +6,18 @@ block vars
     - const theme="dark"
 
 block content
-    include ../blocks/header/header
+    include ../blocks/_parts/header/header
     +header({
         themefy: true,
         hamburger: true
     })
 
-    include ../blocks/about-hero/about-hero
+    include ../blocks/_sections/about-hero/about-hero
     //include ../blocks/services-carousel/services-carousel
-    include ../blocks/about-team/about-team
-    include ../blocks/clients-carousel/clients-carousel
+    include ../blocks/_sections/about-team/about-team
+    include ../blocks/_sections/clients-carousel/clients-carousel
 
-    include ../blocks/next-page/next-page
+    include ../blocks/_sections/next-page/next-page
     +next-page({
         href: "contacts.html",
         overHeading: "Далее",
@@ -25,4 +25,4 @@ block content
         description: false
     })
 
-    include ../blocks/footer/footer
+    include ../blocks/_parts/footer/footer

@@ -6,13 +6,13 @@ block vars
     - const theme="dark"
 
 block content
-    include ../blocks/header/header
+    include ../blocks/_parts/header/header
     +header({
         themefy: true,
         hamburger: true
     })
 
-    include ../blocks/case-hero/case-hero
+    include ../blocks/_sections/case-hero/case-hero
     +case-hero({
         heading: "Океан Бизнес-идей",
         description: "Когда-то образование и профессию выбирали на всю жизнь.",
@@ -20,7 +20,7 @@ block content
         activity: "Дизайн UI/UX, брендинг и разработка"
     })
 
-    include ../blocks/next-page/next-page
+    include ../blocks/_sections/next-page/next-page
     +next-page({
         href: "case-vrpass.html",
         overHeading: "Далее",
@@ -28,4 +28,4 @@ block content
         description: false
     })
 
-    include ../blocks/footer/footer
+    include ../blocks/_parts/footer/footer

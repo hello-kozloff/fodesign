@@ -1,0 +1,33 @@
+@import "../../../sass/smart-grid";
+
+.next-page {
+  @media (max-width: $break_mediumDesktop) {
+    padding: 120px 0;
+  }
+
+  @media (max-width: $break_largeTablet) {
+    padding: 80px 0;
+
+    .section-header {
+      &__heading {
+        font-size: 36px;
+      }
+    }
+
+    &__content {
+      .button-has-icon {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @media (max-width: $break_smallTablet) {
+    padding: 40px 0;
+
+    &__content {
+      .button-has-icon {
+        margin-top: 20px;
+      }
+    }
+  }
+}

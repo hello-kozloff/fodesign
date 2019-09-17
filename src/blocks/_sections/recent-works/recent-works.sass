@@ -1,0 +1,32 @@
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+.recent-works
+  margin: 240px auto
+
+  max-width: 1160px
+  +wrapper-full()
+
+  .section-header
+    margin-bottom: 120px
+
+    &__description
+      max-width: 800px
+      line-height: 140%
+
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  &__item
+    margin-bottom: 40px
+
+    &:not(:nth-child(2n + 2))
+      margin-right: 40px
+
+  &__footer
+    margin-top: 60px - 40px
+    text-align: center
+
+@import "responsive"

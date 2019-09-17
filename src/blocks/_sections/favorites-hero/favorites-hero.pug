@@ -1,0 +1,46 @@
+include ../../../core/bemto
+include ../../_ui/button-has-icon/button-has-icon
+
++b("section").favorites-hero
+    +e.controls
+        +e.navigation
+            +e("button")(type="button").button._prev
+                i(class="icon-chevron-left")
+
+            +e("button")(type="button").button._next
+                i(class="icon-chevron-right")
+
+        +e.dots
+
+    +e.carousel
+        +e.slide(style="background-color: #651CE2;")
+            +e.overlay
+                +e.wrapper
+                    +e.content
+                        +e.categories
+                            +e.icons
+                                +e.icon.icon-web
+                                +e.icon.icon-mobile
+
+                            +e("span").category Интернет-магазин
+
+                        +e("h1").heading VR Pass
+                        +e("p").description Помогли запустить корпоративный сайт клубу виртуальной реальности из Питера
+                        +e.footer
+                            +button-has-icon("case-vrpass.html", "icon-chevron-right", "Исследовать кейс")
+
+        +e.slide.lazyload(style="background-color: #0094FE;" data-bgset="images/favorites-hero/ocean/thumbnail.png 1x")
+            +e.overlay
+                +e.wrapper
+                    +e.content
+                        +e.categories
+                            +e.icons
+                                +e.icon.icon-web
+                                +e.icon.icon-mobile
+
+                            +e("span").category Интернет-магазин
+
+                        +e("h1").heading Океан Бизнес-идей
+                        +e("p").description Когда-то образование и профессию выбирали на всю жизнь. Принцип остался  в прошлом — в любой момент можно пройти переподготовку и освоить новую специализацию. Океан Бизнес Идей в этом поможет.
+                        +e.footer
+                            +button-has-icon("case-ocean.html", "icon-chevron-right", "Исследовать кейс")

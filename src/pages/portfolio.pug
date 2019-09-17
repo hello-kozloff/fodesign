@@ -6,7 +6,7 @@ block vars
     - const theme="dark"
 
 block content
-    include ../blocks/header/header
+    include ../blocks/_parts/header/header
     +header({
         themefy: true,
         hamburger: true
@@ -21,10 +21,10 @@ block content
         content: "Работаем с амбициозными брендами и людьми и создаём что-то великое вместе"
     })
 
-    include ../blocks/recent-works/recent-works
+    include ../blocks/_sections/recent-works/recent-works
     +recent-works(false, "#", "Загрузить еще")
 
-    include ../blocks/next-page/next-page
+    include ../blocks/_sections/next-page/next-page
     +next-page({
         href: "services.html",
         overHeading: "Далее",
@@ -32,4 +32,4 @@ block content
         description: false
     })
 
-    include ../blocks/footer/footer
+    include ../blocks/_parts/footer/footer

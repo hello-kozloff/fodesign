@@ -1,0 +1,15 @@
+include ../../../core/bemto
+
++b("footer").footer
+    +e.wrapper
+        +e("p").copyright 2013-2019 Дизайн-студия Андрея Фомина
+
+        +e("nav").navigation
+            +e("a")(href="https://www.behance.net/fodesignstudio/" target="_blank").route Behance
+            +e("a")(href="https://dribbble.com/fodesignstudio/" target="_blank").route Dribbble
+            +e("a")(href="https://www.instagram.com/fodesignstudio/" target="_blank").route Instagram
+            +e("a")(href="https://vk.com/fodesignstudio" target="_blank").route ВКонтакте
+
+        +e("nav").menu
+            each valueLink in ["Политика конфиденциальности", "Реквизиты студии"]
+                +e("a")(href="#").link= valueLink

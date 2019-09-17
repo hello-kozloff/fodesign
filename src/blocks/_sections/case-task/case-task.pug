@@ -1,0 +1,10 @@
+include ../../../core/bemto
+
+mixin case-task(heading, theme, image)
+    - var background = image.x1 + " 1x, " + image.x2 + " 2x"
+
+    +b("section")(class="case-task _layout_" + theme)
+        +e.overlay.lazyload(data-bgset=background)
+            +e.wrapper
+                +e("span").over-hading Задача
+                +e("h4").heading= heading

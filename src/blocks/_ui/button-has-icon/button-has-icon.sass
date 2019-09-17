@@ -1,0 +1,88 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+
+.button-has-icon
+  position: relative
+  padding: 25px 0 25px 72px
+  display: inline-block
+
+  text-decoration: none
+  outline: none
+
+  &__icon
+    width: 72px
+    height: 72px
+
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+
+    margin: auto
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    font-size: 24px
+
+    border-radius: 50px
+    vertical-align: middle
+
+    @include transition()
+
+  &__content
+    margin-left: 20px
+    vertical-align: middle
+
+    font-size: 12px
+    font-weight: 800
+    line-height: 135%
+    letter-spacing: 0.1em
+    text-transform: uppercase
+
+    @include transition()
+
+  &:hover,
+  &:focus
+    .button-has-icon__icon
+      width: 100%
+
+    .button-has-icon__content
+      opacity: 0
+
+.page_theme_dark
+  .button-has-icon
+    &__icon
+      color: $c-black
+      background: $c-white
+
+    &__content
+      color: $c-white
+
+    &:hover .button-has-icon__icon,
+    &:focus .button-has-icon__icon
+      color: $c-white
+      background-color: $c-orange
+
+    &:active .button-has-icon__icon
+      background-color: $c-blue
+
+.page_theme_light
+  .button-has-icon
+    &__icon
+      color: $c-white
+      background: $c-black
+
+    &__content
+      color: $c-black
+
+    &:hover .button-has-icon__icon,
+    &:focus .button-has-icon__icon
+      color: $c-white
+      background-color: $c-orange
+
+    &:active .button-has-icon__icon
+      background-color: $c-blue
+
+@import "responsive"

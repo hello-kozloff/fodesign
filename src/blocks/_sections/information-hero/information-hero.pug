@@ -1,0 +1,12 @@
+include ../../../core/bemto
+include ../../_ui/button-has-icon/button-has-icon
+
++b("section").information-hero
+    +e.overlay
+        +e.content
+            +e("h1").heading Делаем чистые, аккуратные сайты
+            +e("p").description Думаем о том, как правильно преподнести ваш бизнес, услуги, идеи
+            +e.button
+                +button-has-icon("favorite-projects.html", "icon-chevron-right", "Избранные кейсы")
+
+    +e("video")(src="images/information-hero/background.mp4" width="100%" muted loop autoplay).background

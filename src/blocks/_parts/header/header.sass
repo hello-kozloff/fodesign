@@ -1,0 +1,188 @@
+@import "../../../sass/_mixins/reset-button"
+@import "../../../sass/_mixins/transition"
+
+@import "../../../sass/smart-grid"
+@import "../../../sass/variables"
+
+.header
+  position: fixed
+  z-index: 999
+
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+  height: 60px
+  padding: 40px 0
+
+  pointer-events: none
+
+  //- header__content - wrapper
+  &__grid
+    display: flex
+    @include wrapper()
+
+  &__content,
+  &__buttons
+    display: flex
+    align-items: center
+
+  //- header__home - wrapper
+  &__home
+    display: inline-block
+    text-decoration: none
+    outline: none
+
+    pointer-events: auto
+
+    &:hover .header__logo,
+    &:focus .header__logo
+      fill: $c-orange
+
+      &:active .header__logo
+        fill: $c-blue
+
+  &__logo
+    position: relative
+    z-index: 9999999
+
+    width: 16px
+    height: 24px
+
+    vertical-align: middle
+    @include transition()
+
+  &__sitename
+    margin-left: 15px
+
+    font-size: 16px
+    font-weight: 800
+    line-height: 135%
+
+    vertical-align: middle
+  //- header__home - wrapper end
+
+  &__description
+    max-width: 110px
+    width: 100%
+
+    margin: 0 0 0 15px
+
+    display: flex
+    align-items: center
+
+    font-size: 10px
+    line-height: 150%
+
+    &:before
+      content: ""
+
+      width: 1px
+      height: 15px
+
+      margin-right: 15px
+      display: block
+  //- header__content - wrapper end
+
+  //- header__buttons - wrapper
+  &__buttons
+    margin-left: auto
+    pointer-events: auto
+
+  &__button
+    width: 60px
+    height: 60px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @include rest-button()
+    border-radius: 50%
+
+    &:not(:first-child)
+      margin-left: 15px
+
+    @include transition()
+
+    &_hamburger
+      span
+        width: 4px
+        height: 4px
+
+        display: inline-block
+        vertical-align: middle
+
+        border-radius: 50%
+
+        &:not(:last-child)
+          margin-right: 6px
+
+        @include transition()
+//- header__buttons - wrapper end
+
+//- Theming
+.page_theme_dark
+  .header
+    &__logo
+      fill: $c-white
+
+    &__sitename
+      color: $c-white
+
+    &__description
+      color: rgba($c-white, .25)
+
+      &:before
+        background-color: rgba($c-white, .1)
+
+    //- header__buttons - wrapper
+    &__button
+      color: $c-white
+      background: rgba($c-white, .05)
+
+      &_hamburger
+        > span
+          background: $c-white
+
+      &:hover,
+      &:focus
+        background: rgba($c-white, .1)
+
+      &:active
+        background: rgba($c-white, .15)
+    //- header__buttons - wrapper end
+
+.page_theme_light
+  .header
+    &__logo
+      fill: $c-black
+
+    &__sitename
+      color: $c-black
+
+    &__description
+      color: rgba($c-black, .25)
+
+      &:before
+        background-color: rgba($c-black, .1)
+
+    //- header__buttons - wrapper
+    &__button
+      color: $c-black
+      background: rgba($c-black, .05)
+
+      &_hamburger
+        > span
+          background: $c-black
+
+      &:hover,
+      &:focus
+        background: rgba($c-black, .1)
+
+      &:active
+        background: rgba($c-black, .15)
+//- header__buttons - wrapper end
+
+@import "responsive"

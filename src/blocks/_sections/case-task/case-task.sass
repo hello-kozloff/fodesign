@@ -1,0 +1,51 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+.case-task
+  height: 525px
+
+  &__overlay
+    width: 100%
+    height: 100%
+
+    display: flex
+
+    background-repeat: no-repeat
+
+  &__wrapper
+    max-width: 1160px
+    width: 100%
+    margin: auto
+
+    @include wrapper-full()
+
+  &__over-hading
+    display: block
+    margin-bottom: 20px
+
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+  &__heading
+    max-width: 710px
+    margin: 0
+
+    font-size: 32px
+    font-weight: 500
+    line-height: 180%
+
+  &_layout
+    &_vr-pass
+      background: linear-gradient(0deg, #5821F8, #5821F8)
+
+      .case-task__overlay
+        background-size: 75%
+        background-position: 130% bottom
+
+      .case-task__over-hading
+        color: rgba($c-white, .5)
+
+      .case-task__heading
+        color: $c-white

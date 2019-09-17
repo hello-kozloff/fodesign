@@ -1,0 +1,225 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/_mixins/reset-button"
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+.clients-carousel
+  margin: 240px 0
+
+  .flickity-viewport
+    min-height: 328px
+
+  &__wrapper
+    max-width: 1160px
+    margin: 0 auto
+    @include wrapper-full()
+
+  &__heading
+    margin: 0
+
+    font-size: 32px
+    font-weight: 500
+    line-height: 180%
+
+  &__grid
+    margin-top: 100px
+
+  &__row
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &:not(:last-child)
+      margin-bottom: 115px
+
+  &__company
+    display: inline-block
+
+    text-decoration: none
+    outline: none
+    @include transition()
+
+    > img
+      width: 100%
+
+    &:hover,
+    &:focus
+      opacity: .5
+
+  &__container
+    position: relative
+    margin-top: 110px
+
+  &__slider
+    position: relative
+    max-width: 860px
+
+    outline: none
+    @include transition()
+    overflow: hidden
+
+    .flickity-viewport
+      @include transition()
+
+    &:focus
+      opacity: .7
+
+  &__slide
+    width: 100%
+
+    &:not(:last-child)
+      margin-right: 80px
+
+  &__message
+    margin: 0 0 40px 0
+
+    font-size: 32px
+    font-weight: 500
+    line-height: 180%
+
+    text-indent: 140px
+
+  &__footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__customer
+    display: flex
+    align-items: center
+
+  &__thumbnail
+    width: 60px
+    height: 60px
+
+    margin-right: 20px
+    flex-shrink: 0
+
+    border-radius: 50%
+    background-position: center
+    background-size: cover
+
+  &__username
+    margin: 0
+
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+  &__role
+    margin: 0
+
+    font-size: 14px
+    font-weight: 600
+    line-height: 170%
+
+  &__more
+    font-size: 12px
+    font-weight: 800
+    line-height: 135%
+
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    text-decoration: none
+
+    outline: none
+    @include transition
+
+  &__controls
+    position: absolute
+    right: 0
+    top: 0
+
+    display: flex
+    align-items: center
+
+  &__control
+    width: 60px
+    height: 60px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    font-size: 24px
+
+    border: none
+    border-radius: 50%
+
+    @include transition()
+    @include rest-button()
+
+    &:not(:last-child)
+      margin-right: 20px
+
+.page_theme_dark
+  .clients-carousel
+    &__heading
+      color: $c-white
+
+    &__message
+      color: $c-white
+
+    &__username
+      color: $c-white
+
+    &__role
+      color: rgba($c-white, .75)
+
+    &__more
+      color: $c-white
+
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue
+
+    &__control
+      color: $c-white
+      background-color: rgba($c-white, .05)
+
+      &:hover,
+      &:focus
+        background-color: rgba($c-white, .1)
+
+      &:active
+        background-color: rgba($c-white, .15)
+
+.page_theme_light
+  .clients-carousel
+    &__heading
+      color: $c-black
+
+    &__message
+      color: $c-black
+
+    &__username
+      color: $c-black
+
+    &__role
+      color: rgba($c-black, .75)
+
+    &__more
+      color: $c-black
+
+      &:hover,
+      &:focus
+        color: $c-orange
+
+      &:active
+        color: $c-blue
+
+    &__control
+      color: $c-black
+      background-color: rgba($c-black, .05)
+
+      &:hover,
+      &:focus
+        background-color: rgba($c-black, .1)
+
+      &:active
+        background-color: rgba($c-black, .15)
+
+@import "responsive"

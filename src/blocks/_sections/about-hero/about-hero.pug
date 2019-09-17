@@ -1,0 +1,35 @@
+include ../../../core/bemto
+include ../../heading-page/heading-page
+
+mixin block(counter, text, out=false)
+    +e.block
+        if (out !== false)
+            +e("span").counter= counter + out
+
+        else
+            +e("span").counter= counter
+
+        +e("h4").text= text
+
++b("section").about-hero
+    +e.wrapper
+        +heading-page({
+            tag: "h1",
+            content: "Студия"
+        }, {
+            tag: "p",
+            content: "Идем в ногу со временем, придерживаясь новых трендов как в дизайне, так и в разработке."
+        })
+
+        +e.blocks
+            +e.block
+                +block("4", "Года студии")
+
+            +e.block
+                +block("40+", "Проектов")
+
+            +e.block
+                +block("7", "Человек в команде", "+2")
+
+            +e.block
+                +block("16", "Наград")

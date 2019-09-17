@@ -6,15 +6,15 @@ block vars
     - const theme="dark"
 
 block content
-    include ../blocks/header/header
+    include ../blocks/_parts/header/header
     +header({
         themefy: true,
         hamburger: true
     })
 
-    include ../blocks/cooperation-hero/cooperation-hero
+    include ../blocks/_sections/cooperation-hero/cooperation-hero
 
-    include ../blocks/next-page/next-page
+    include ../blocks/_sections/next-page/next-page
     +next-page({
         href: "contacts.html",
         overHeading: "Далее",
@@ -22,4 +22,4 @@ block content
         description: false
     })
 
-    include ../blocks/footer/footer
+    include ../blocks/_parts/footer/footer

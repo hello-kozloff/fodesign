@@ -1,0 +1,70 @@
+include ../../../core/bemto
+
+mixin slide(content, customer, route, string)
+    - var background = customer.thumbnail + " 1x"
+
+    +e.slide
+        +e("p").message= content
+        +e.footer
+            +e.customer
+                +e.thumbnail.lazyload(data-bgset=background)
+                +e.infromation
+                    +e("h4").username= customer.username
+                    +e("p").role= customer.role
+
+            +e("a")(href=customer.route target="_blank").more= customer.string
+
++b("section").clients-carousel
+    +e.wrapper
+        +e("h3").heading Клиенты
+        +e.grid
+            +e.row
+                +e(style="max-width: 144px;").company
+                    +e("img")(src="images/clients-carousel/rosneft/rosneft.svg" alt="Роснефть")
+
+                +e(style="max-width: 61px;").company
+                    +e("img")(src="images/clients-carousel/garant-kapital/garant-kapital.png" srcset="images/clients-carousel/garant-kapital/garant-kapital@2x.png" alt="Грант Капитал")
+
+                +e(style="max-width: 176px;").company
+                    +e("img")(src="images/clients-carousel/u-modno/u-modno.png" srcset="images/clients-carousel/u-modno/u-modno@2x.png" alt="Улыбаться модно!")
+
+                +e(style="max-width: 166px;").company
+                    +e("img")(src="images/clients-carousel/leningrad-life/leningrad-life.png" srcset="images/clients-carousel/leningrad-life/leningrad-life@2x.png" alt="Leningrad Life")
+
+            +e.row
+                +e(style="max-width: 98px;").company
+                    +e("img")(src="images/clients-carousel/saintp-hustle/saintp-hustle.png" srcset="images/clients-carousel/saintp-hustle/saintp-hustle@2x.png" alt="SaintP Hustle")
+
+                +e(style="max-width: 153px;").company
+                    +e("img")(src="images/clients-carousel/lsm/lsm.png" srcset="images/clients-carousel/lsm/lsm@2x.png" alt="LSM")
+
+                +e(style="max-width: 135px;").company
+                    +e("img")(src="images/clients-carousel/lord/lord.png" srcset="images/clients-carousel/lord/lord@2x.png" alt="Князь")
+
+                +e(style="max-width: 180px;").company
+                    +e("img")(src="images/clients-carousel/len-stoi-trest/len-stoi-trest.png" srcset="images/clients-carousel/len-stoi-trest/len-stoi-trest@2x.png" alt="Ленстройтрест")
+
+        +e.container
+            +e.slider
+                +slide('Рекомендую студию Андрея Фомина. Ребята настоящие профессионалы своего дела! Учли все пожелания: разработали логотип, сайт и запустили рекламу.', {
+                    thumbnail: "images/clients-carousel/customers/dmitri-mihailovih/thumbnail.jpg",
+                    username: "Дмитрий Михайлович",
+                    role: 'Владелец стоматологии "Улыбаться модно!"',
+                    route: "https://youtu.be/GAlI3ed_oec",
+                    string: "Смотреть видео-отзыв"
+                })
+
+                +slide("Обращался по вопросу аналитики аудитории с описанием конкурентов и производству сайтов визиток. Результат: цена лида упала в два раза. Рекомендую!", {
+                    thumbnail: "images/clients-carousel/customers/stepan-stepanov/thumbnail.jpg",
+                    username: "Степан Степанов",
+                    role: "Консалтинг в области коммерции",
+                    route: "https://youtu.be/OBYuBLdGjfE",
+                    string: "Смотреть видео-отзыв"
+                })
+
+            +e.controls
+                +e("button")(type="button").control._prev
+                    i.icon-arrow-left
+
+                +e("button")(type="button").control._next
+                    i.icon-arrow-right

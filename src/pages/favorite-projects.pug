@@ -6,11 +6,11 @@ block vars
     - const theme="dark"
 
 block content
-    include ../blocks/header/header
+    include ../blocks/_parts/header/header
     +header({
         themefy: false,
         hamburger: true
     })
 
-    include ../blocks/favorites-hero/favorites-hero
-    include ../blocks/footer/footer
+    include ../blocks/_sections/favorites-hero/favorites-hero
+    include ../blocks/_parts/footer/footer

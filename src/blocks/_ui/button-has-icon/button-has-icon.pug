@@ -1,0 +1,9 @@
+include ../../../core/bemto
+
+mixin button-has-icon(href, icon, content)
+    +b("a")(href=href).button-has-icon
+        +e("span").icon
+            i(class=icon)
+
+        +e("span").content
+            = content
