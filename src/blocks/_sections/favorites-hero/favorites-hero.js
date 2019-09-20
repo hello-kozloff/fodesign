@@ -1,6 +1,5 @@
 $(document).ready(() => {
     let $favorites = {};
-    const $controllerClass = "favorites-hero__button";
 
     $favorites.slider = $(".favorites-hero__carousel").flickity({
         pageDots: false,
@@ -15,7 +14,6 @@ $(document).ready(() => {
     let $dotsContainer = [];
 
     $favorites.slideCount = flkty.slides.length;
-
 
     //- Create dots
     for (let i = 0; i < $favorites.slideCount; i++) {
@@ -33,31 +31,29 @@ $(document).ready(() => {
 
     //- Select slide when click dot
     $(".favorites-hero__dot").on("click", function () {
-        const index = $(this).index();
-        $favorites.slider.flickity('select', index);
+        $favorites.slider.flickity('select', $(this).index());
     });
 
     $favorites.slider.on("select.flickity", function () {
-        $(".favorites-hero__dot")
+        const dotElement = $(".favorites-hero__dot");
+
+        dotElement
             .filter(".favorites-hero__dot_current")
             .removeClass("favorites-hero__dot_current");
 
-        $(".favorites-hero__dot")
+        dotElement
             .eq(flkty.selectedIndex)
             .addClass("favorites-hero__dot_current");
     });
 
-    //- On click prev controller
-    $("." + $controllerClass + "_prev").on("click", function (event) {
+    //- On click controller
+    $(".favorites-hero__button").on("click", function (event) {
         event.preventDefault();
 
-        $favorites.slider.flickity('previous');
-    });
-
-    //- On click next controller
-    $("." + $controllerClass + "_next").on("click", function (event) {
-        event.preventDefault();
-
-        $favorites.slider.flickity('next');
+        if ($(this).hasClass("favorites-hero__button_prev")) {
+            $favorites.slider.flickity('previous');
+        } else if ($(this).hasClass("favorites-hero__button_next")) {
+            $favorites.slider.flickity('next');
+        }
     });
 });
