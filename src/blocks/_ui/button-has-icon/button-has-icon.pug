@@ -1,9 +1,18 @@
 include ../../../core/bemto
 
-mixin button-has-icon(href, icon, content)
-    +b("a")(href=href).button-has-icon
-        +e("span").icon
-            i(class=icon)
+mixin button-has-icon(href, icon, content, type="link")
+    if (type === "link")
+        +b("a")(href=href).button-has-icon
+            +e("span").icon
+                i(class=icon)
 
-        +e("span").content
-            = content
+            +e("span").content
+                = content
+
+    else if (type === "button")
+        +b("button")(type=href).button-has-icon
+            +e("span").icon
+                i(class=icon)
+
+            +e("span").content
+                = content
