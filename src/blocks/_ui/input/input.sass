@@ -1,0 +1,84 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+.input
+  position: relative
+
+  width: 100%
+  height: 80px
+
+  &__placeholder
+    position: absolute
+    height: 30px
+
+    top: 5px
+    right: 0
+    left: auto
+    bottom: 0
+
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+    margin: auto
+    pointer-events: none
+
+  &__field
+    width: 100%
+    height: 100%
+
+    border: none
+    border-bottom: 1px solid transparent
+    border-radius: 0
+
+    font-size: 16px
+    font-weight: 600
+
+    background: transparent
+    outline: none
+
+    @include transition()
+
+    &::placeholder
+      @include transition()
+
+    &:focus::placeholder
+      opacity: .1
+
+  &_has-placeholder
+    .input__placeholder:after
+      content: "*"
+
+    .input__field
+      padding-right: 80px
+      box-sizing: border-box
+
+.page_theme_dark
+  .input
+    &__placeholder
+      color: rgba($c-white, .5)
+
+    &__field
+      color: $c-white
+
+      border-color: #181A26
+
+      &::placeholder
+        color: rgba($c-white, .5)
+
+      &:focus
+        border-color: #2b2f44
+
+.page_theme_light
+  .input
+    &__placeholder
+      color: rgba($c-black, .5)
+
+    &__field
+      color: $c-black
+
+      border-color: $c-black
+
+      &::placeholder
+        color: rgba($c-black, .5)
