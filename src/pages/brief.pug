@@ -1,0 +1,18 @@
+extends ./contains/default
+
+block vars
+    - const title="fodesign / Дизайн студия Андрея Фомина / Бриф"
+    - const layout="brief"
+    - const theme="dark"
+
+block content
+    include ../blocks/_parts/header/header
+    +header({
+        themefy: false,
+        hamburger: true
+    })
+
+    main.page__wrapper
+        include ../blocks/brief/brief
+
+    include ../blocks/_parts/footer/footer
