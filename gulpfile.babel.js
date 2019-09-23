@@ -129,7 +129,7 @@ gulp.task("build:vendor-style", () => {
   return gulp.src([
     "node_modules/normalize.css/normalize.css",
     "node_modules/flickity-fade/flickity-fade.css",
-    "node_modules/ion-rangeslider/css/ion.rangeSlider.css"
+    // "node_modules/ion-rangeslider/css/ion.rangeSlider.css"
   ])
     .pipe(contact("vendor.css"))
     .pipe(gulp.dest("static/css"))
