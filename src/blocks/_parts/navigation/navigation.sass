@@ -1,3 +1,4 @@
+@import "../../../sass/_mixins/visually-hidden"
 @import "../../../sass/_mixins/transition"
 @import "../../../sass/_mixins/reset-button"
 @import "../../../sass/_mixins/visually-hidden"
@@ -19,23 +20,31 @@
 
   margin: auto
 
-  transition: 450ms ease-out
   opacity: 1
 
   pointer-events: auto
+  backdrop-filter: blur(10px)
+
+  @include transition()
 
   &_hidden
+    @include visually-hidden()
     opacity: 0
-    left: -200%
+
+    .navigation__wrapper
+      left: -200%
 
   &__wrapper
-    position: relative
+    position: absolute
+    left: 0
 
     width: calc(100% - 530px)
     height: 100%
 
     padding: 140px 0 60px 0
     box-sizing: border-box
+
+    transition: 450ms ease-out
 
   &__scroll
     height: 100%
