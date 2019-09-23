@@ -1,0 +1,88 @@
+include ../../core/bemto
+include ../../blocks/_ui/input/input
+include ../../blocks/_ui/button-has-icon/button-has-icon
+
+mixin file-button(iconClose, text, isLoad)
+    - var classNames = isLoad === true ? "button _is-loading" : "button"
+
+    +e("button")(class=classNames)
+        +e.icon
+            i(class=iconClose)
+
+        +e("span").button-text= text
+
++b("div").brief
+    +e.viewport
+        +e.carousel.__wrapper
+            +e.window._hello
+                +e("h1").heading Давайте знакомиться!
+                +e.content
+                    +e.grid
+                        +e.item
+                            +input("text", "username", true, "Как к вам обращаться?", "Имя")
+
+                        +e.item
+                            +input("text", "company", false, "Название компании?", false)
+
+                        +e.item
+                            +input("text", "email", true, "Куда вам написать?", "Email")
+
+                        +e.item
+                            +input("text", "phone", false, "Куда позвонить?", false)
+
+            +e.window._categories
+                +e("h1").heading Выберите услуги
+                +e.content
+                    +e.grid
+                        +e.group
+                            +e("button")(type="text" data-content="Хочу проконсультироваться").category Хочу проконсультироваться
+                            +e("button")(type="text" data-content="Интернет-магазин").category Интернет-магазин
+                            +e("button")(type="text" data-content="Мобильное приложение").category Мобильное приложение
+                            +e("button")(type="text" data-content="Корпоративный сайт").category Корпоративный сайт
+
+                        +e.group
+                            +e("button")(type="text" data-content="Стартап").category Стартап
+                            +e("button")(type="text" data-content="Система или сервис").category Система или сервис
+                            +e("button")(type="text" data-content="Брендинг").category Брендинг
+                            +e("button")(type="text" data-content="Дизайн-поддержка").category Дизайн-поддержка
+
+            +e.window._budget
+                +e("h1").heading Выделенный бюджет
+                +e.content
+                    +e.range-slider
+
+                    +e.information
+                        +e.item._left
+                            +e("h4").title Менее 150 000 ₽
+                            +e("p").text Минимальная стоимость работ по вашему запросу
+
+                        +e.item._center
+                            +e("h4").title 1 300 000 ₽
+                            +e("p").text Идеальная стоимость вашего проекта
+
+                        +e.item._right
+                            +e("h4").title 2.5М ₽ и больше
+                            +e("p").text Выделим отдельную команду под проект
+
+            +e.window._about
+                +e("h1").heading Опишите проект
+                +e.content
+                    +e("textarea")(placeholder="Опишите свою идею, мысль, проект...").text
+
+            +e.window._finish
+                +e("h1").heading Спасибо, что выбрали нас!
+                +e("p").description Чтобы вы не скучали, пока ждёте обратную связь, можете  продолжить исследование нашего сайта:
+                +e.content
+                    +button-has-icon("about-us.html", "icon-arrow-right", "Читайте о студии", "link", "left")
+                    +button-has-icon("portfolio.html", "icon-cases", "Посмотрите наши работы", "link", "left")
+
+    +e.files._is-hidden
+        +e.wrapper
+            +e.horizontal-scroll
+                +file-button("icon-plus", "Добавить файл", true)
+
+    +e.footer
+        +e.wrapper
+            +e.dots
+
+            +button-has-icon("button", "icon-arrow-right", "Далее", "button", "left")

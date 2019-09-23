@@ -1,0 +1,418 @@
+@import "../../sass/_mixins/transition"
+@import "../../sass/_mixins/reset-button"
+@import "../../sass/variables"
+@import "../../sass/smart-grid"
+
+.brief
+  position: relative
+
+  width: 100%
+  height: 100%
+
+  background: #050508
+  overflow: hidden
+
+  &__viewport
+    width: 100%
+    height: calc(100% - 140px)
+
+    padding: 140px 0 0 0
+    box-sizing: border-box
+
+  &__carousel
+    position: relative
+    overflow: hidden
+    outline: none
+
+    .flickity-slider
+      height: 100%
+
+  &__wrapper
+    max-width: 1160px
+    width: 100%
+    height: 100%
+
+    margin: 0 auto
+    @include wrapper-full()
+    box-sizing: border-box
+
+  &__window
+    width: 100%
+    height: 100%
+
+    @include wrapper-full()
+    box-sizing: border-box
+
+    &_hello
+      .brief__grid
+        display: flex
+        flex-wrap: wrap
+
+      .brief__item
+        width: calc(50% - 60px)
+
+        &:nth-child(2n + 2)
+          margin-left: 120px
+
+        &:nth-last-child(-n + 2)
+          margin-top: 100px
+
+    &_categories
+      .brief__grid
+        display: flex
+        flex-wrap: wrap
+
+      .brief__group
+        width: 50%
+
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+        flex-shrink: 0
+        box-sizing: border-box
+
+        &:first-child
+          padding-right: 15px
+
+        &:last-child
+          padding-left: 15px
+
+      .brief__category
+        @include rest-button()
+
+        color: $c-white
+        font-size: 16px
+        font-weight: 500
+        line-height: 32px
+
+        @include transition()
+
+        &:not(:last-child)
+          margin-bottom: 20px
+
+        &:before
+          content: "•"
+
+          width: 24px
+          height: 24px
+
+          display: inline-block
+          margin-right: 12px
+
+        &:hover:not(.brief__category_current),
+        &:focus:not(.brief__category_current)
+          color: $c-orange
+
+        &_current
+          color: $c-blue
+
+          &:hover,
+          &:focus
+            color: rgba($c-blue, .7)
+
+    &_budget
+      .brief__information
+        margin-top: 30px
+
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+
+      .brief__item
+        max-width: 180px
+        opacity: .5
+
+        &_left
+          text-align: left
+
+        &_center
+          position: relative
+          left: -5px
+
+          opacity: 1
+          text-align: center
+
+        &_right
+          text-align: right
+
+      .brief__title
+        margin: 0 0 20px 0
+
+        color: $c-white
+        font-size: 16px
+        font-weight: 500
+        line-height: 100%
+
+      .brief__text
+        margin: 0
+
+        color: rgba($c-white, .5)
+        font-size: 12px
+        font-weight: 600
+        line-height: 170%
+
+    &_about
+      .brief__text
+        width: 100%
+        min-height: 350px
+        height: auto
+
+        color: $c-white
+        font-size: 20px
+        line-height: 200%
+
+        border: none
+        background: transparent
+
+        outline: none
+        resize: none
+
+        -ms-overflow-style: none
+        overflow-y: auto
+        overflow: -moz-scrollbars-none
+
+        &::-webkit-scrollbar
+          width: 0
+
+        &::placeholder
+          color: rgba($c-white, .5)
+          @include transition()
+
+        &:focus::placeholder
+          opacity: .1
+
+    &_finish
+      .brief__content
+        margin-top: 80px
+
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+        .button-has-icon:not(:last-child)
+          margin-bottom: 40px
+
+  &__content
+    margin-top: 120px
+
+  &__heading
+    margin: 0 0 120px 0
+
+    color: $c-white
+    font-size: 44px
+    font-weight: 500
+    line-height: 145%
+
+  &__description
+    margin: -100px 0 0 0
+    max-width: 640px
+
+    color: $c-white
+    font-size: 16px
+    font-weight: 500
+    line-height: 200%
+
+  &__footer
+    .brief__wrapper
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+    .button-has-icon
+      padding: 25px 72px 25px 0
+
+      &__icon
+        left: auto
+        right: 0
+
+      &__content
+        margin-left: 0
+        margin-right: 20px
+
+      &:hover,
+      &:focus
+        .button-has-icon__icon
+          right: 0
+
+    position: absolute
+    bottom: 0
+
+    width: 100%
+    height: 140px
+
+    background: #08090D
+
+    @include transition()
+
+    &_is-hidden
+      bottom: -140px
+
+  &__dots
+    display: flex
+    align-items: center
+
+  &__dot
+    position: relative
+    @include rest-button()
+
+    width: 60px
+    height: 60px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    span
+      color: rgba($c-white, .5)
+      font-size: 14px
+      font-weight: 600
+      line-height: 170%
+
+      @include transition()
+
+    &:focus span,
+    &:active span
+      color: $c-white
+
+    &:before
+      content: ""
+
+      position: absolute
+
+      width: 8px
+      height: 8px
+
+      margin: auto
+      display: block
+      box-sizing: border-box
+
+      border-radius: 50%
+      border: 2px solid $c-white
+
+      opacity: 0
+      @include transition()
+
+    &_current
+      span
+        opacity: 0
+        transform: scale(.5)
+
+      &:before
+        opacity: 1
+
+  &__files
+    position: absolute
+    bottom: -140px
+
+    width: 100%
+    height: 140px
+
+    border-top: 1px solid rgba($c-white, .1)
+    background: #050508
+
+    transition: 400ms ease-out
+
+    .brief__wrapper
+      align-items: center
+      -ms-overflow-style: none
+      overflow: auto
+      overflow: -moz-scrollbars-none
+
+      &::-webkit-scrollbar
+        width: 0
+
+      position: initial
+
+    &_is-toggle
+      bottom: 140px
+
+  &__horizontal-scroll
+    position: relative
+
+    width: 100%
+    height: 100%
+
+    display: flex
+    align-items: center
+
+  &__button
+    @include rest-button()
+
+    display: flex
+    align-items: center
+
+    outline: none
+    flex-shrink: 0
+
+    &:hover:not(.brief__button_is-loading),
+    &:focus:not(.brief__button_is-loading)
+      .brief__icon
+        background: rgba($c-white, .03)
+
+      .brief__button-text
+        color: $c-white
+
+    &:not(:last-child)
+      margin-right: 40px
+
+    &:active:not(.brief__button_is-loading)
+      .brief__icon
+        border-color: transparent
+
+    &_is-loading
+      .brief__icon
+        border-color: transparent
+        background: rgba($c-white, .05)
+
+      &:hover,
+      &:focus
+        .brief__icon
+          background: rgba($c-white, .08)
+
+        .brief__button-text
+          color: $c-white
+
+      &:active
+        .brief__icon
+          background: rgba($c-white, .1)
+
+  &__icon
+    width: 60px
+    height: 60px
+
+    margin-right: 20px
+    box-sizing: border-box
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    color: rgba($c-white, .5)
+    font-size: 22px
+
+    border-radius: 50%
+    border: 2px solid rgba($c-white, .05)
+    background: transparent
+
+    flex-shrink: 0
+
+    @include transition()
+
+  &__button-text
+    color: rgba($c-white, .5)
+    font-size: 12px
+    font-weight: 800
+    line-height: 135%
+
+    text-transform: uppercase
+    letter-spacing: 0.1em
+
+    @include transition()
+
+.page_theme_dark
+  .brief
+    &__submit
+      .button-has-icon__icon
+        color: $c-white
+        background: $c-blue
