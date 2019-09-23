@@ -1,10 +1,10 @@
 include ../../../core/bemto
 
-mixin input(type, required, placeholder, labelPlaceholder)
+mixin input(type, name, required, placeholder, labelPlaceholder)
     - var classNames = labelPlaceholder === false ? 'input' : 'input _has-placeholder'
 
     +b(class=classNames)
         if (labelPlaceholder !== false)
             +e("label").placeholder= labelPlaceholder
 
-        +e("input")(type=type placeholder=placeholder required=required).field
+        +e("input")(type=type name=name placeholder=placeholder required=required).field
