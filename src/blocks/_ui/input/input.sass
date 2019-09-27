@@ -10,7 +10,7 @@
 
   &__placeholder
     position: absolute
-    height: 30px
+    height: 40px
 
     top: 5px
     right: 0
@@ -70,6 +70,10 @@
       &:focus
         border-color: #2b2f44
 
+    &_error
+      .input__field
+        border-color: $c-orange
+
 .page_theme_light
   .input
     &__placeholder
@@ -82,3 +86,7 @@
 
       &::placeholder
         color: rgba($c-black, .5)
+
+    &_error
+      .input__field
+        border-color: $c-orange

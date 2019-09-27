@@ -195,15 +195,24 @@ function isBriefValid(id) {
 
             $brief.data.form = data;
 
-            if ($brief.data.form.username.length === 0 || $brief.data.form.email.length === 0) {
+            if ($brief.data.form.username.length === 0) {
                 valid = false;
 
-                alert("Вы не заполнили обязательные поля! (Имя/Email)");
+                $("input[name='username']").parent().addClass("input_error");
+            }
+
+            if ($brief.data.form.email.length === 0) {
+                valid = false;
+
+                $("input[name='email']").parent().addClass("input_error");
             }
             break;
         }
 
         case WINDOW_CATEGORIES: {
+            $("input[name='username']").parent().removeClass("input_error");
+            $("input[name='email']").parent().removeClass("input_error");
+
             if ($brief.data.categories.length === 0) {
                 valid = false;
 
@@ -236,4 +245,9 @@ function setNextButtonTheme(isSubmit = false) {
             .find("span.button-has-icon__content")
             .text("Далее");
     }
+}
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
