@@ -12,20 +12,21 @@ block content
         hamburger: true
     })
 
-    include ../blocks/_sections/information-hero/information-hero
+    main.page__main
+        include ../blocks/_sections/information-hero/information-hero
 
-    include ../blocks/_sections/recent-works/recent-works
-    +recent-works(true, "portfolio.html", "Смотреть все проекты")
+        include ../blocks/_sections/recent-works/recent-works
+        +recent-works(true, "portfolio.html", "Смотреть все проекты")
 
-    //include ../blocks/services-carousel/services-carousel
-    include ../blocks/_sections/clients-carousel/clients-carousel
+        //include ../blocks/services-carousel/services-carousel
+        include ../blocks/_sections/clients-carousel/clients-carousel
 
-    include ../blocks/_sections/next-page/next-page
-    +next-page({
-        href: "services.html",
-        overHeading: "Далее",
-        heading: "Услуги",
-        description: false
-    })
+        include ../blocks/_sections/next-page/next-page
+        +next-page({
+            href: "services.html",
+            overHeading: "Далее",
+            heading: "Услуги",
+            description: false
+        })
 
     include ../blocks/_parts/footer/footer

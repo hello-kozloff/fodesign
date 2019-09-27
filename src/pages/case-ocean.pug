@@ -12,20 +12,21 @@ block content
         hamburger: true
     })
 
-    include ../blocks/_sections/case-hero/case-hero
-    +case-hero({
-        heading: "Океан Бизнес-идей",
-        description: "Когда-то образование и профессию выбирали на всю жизнь.",
-        client: "Океан Бизнес-идей",
-        activity: "Дизайн UI/UX, брендинг и разработка"
-    })
+    main.page__main
+        include ../blocks/_sections/case-hero/case-hero
+        +case-hero({
+            heading: "Океан Бизнес-идей",
+            description: "Когда-то образование и профессию выбирали на всю жизнь.",
+            client: "Океан Бизнес-идей",
+            activity: "Дизайн UI/UX, брендинг и разработка"
+        })
 
-    include ../blocks/_sections/next-page/next-page
-    +next-page({
-        href: "case-vrpass.html",
-        overHeading: "Далее",
-        heading: "VR Pass",
-        description: false
-    })
+        include ../blocks/_sections/next-page/next-page
+        +next-page({
+            href: "case-vrpass.html",
+            overHeading: "Далее",
+            heading: "VR Pass",
+            description: false
+        })
 
     include ../blocks/_parts/footer/footer

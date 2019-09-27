@@ -12,20 +12,21 @@ block content
         hamburger: true
     })
 
-    include ../blocks/heading-page/heading-page
-    +heading-page(false, {
-        tag: "h1",
-        content: "Услуги"
-    })
+    main.page__main
+        include ../blocks/heading-page/heading-page
+        +heading-page(false, {
+            tag: "h1",
+            content: "Услуги"
+        })
 
-    include ../blocks/_sections/services/services
+        include ../blocks/_sections/services/services
 
-    include ../blocks/_sections/next-page/next-page
-    +next-page({
-        href: "portfolio.html",
-        overHeading: "Далее",
-        heading: "Портфолио",
-        description: false
-    })
+        include ../blocks/_sections/next-page/next-page
+        +next-page({
+            href: "portfolio.html",
+            overHeading: "Далее",
+            heading: "Портфолио",
+            description: false
+        })
 
     include ../blocks/_parts/footer/footer

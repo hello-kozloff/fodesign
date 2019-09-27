@@ -12,14 +12,15 @@ block content
         hamburger: true
     })
 
-    include ../blocks/_sections/cooperation-hero/cooperation-hero
+    main.page__main
+        include ../blocks/_sections/cooperation-hero/cooperation-hero
 
-    include ../blocks/_sections/next-page/next-page
-    +next-page({
-        href: "contacts.html",
-        overHeading: "Далее",
-        heading: "Контакты",
-        description: false
-    })
+        include ../blocks/_sections/next-page/next-page
+        +next-page({
+            href: "contacts.html",
+            overHeading: "Далее",
+            heading: "Контакты",
+            description: false
+        })
 
     include ../blocks/_parts/footer/footer

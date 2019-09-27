@@ -12,14 +12,15 @@ block content
         hamburger: true
     })
 
-    include ../blocks/_sections/contacts-hero/contacts-hero
+    main.page__main
+        include ../blocks/_sections/contacts-hero/contacts-hero
 
-    include ../blocks/_sections/next-page/next-page
-    +next-page({
-        href: "get-started.html",
-        overHeading: "Далее",
-        heading: "Начать проект",
-        description: false
-    })
+        include ../blocks/_sections/next-page/next-page
+        +next-page({
+            href: "get-started.html",
+            overHeading: "Далее",
+            heading: "Начать проект",
+            description: false
+        })
 
     include ../blocks/_parts/footer/footer

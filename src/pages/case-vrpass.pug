@@ -12,19 +12,20 @@ block content
         hamburger: true
     })
 
-    include ../blocks/_sections/case-hero/case-hero
-    +case-hero({
-        heading: "VR Pass",
-        description: "Для любителей квестов в виртуальной реальности существуют специальные игры любой сложности, которые могут отравить вас как в классическую комнату, так и на другую планету. Для детей различного возраста также предусмотрены развивающие игры и  приложения.",
-        client: "VR Pass",
-        activity: "Дизайн UI/UX, брендинг и разработка"
-    })
+    main.page__main
+        include ../blocks/_sections/case-hero/case-hero
+        +case-hero({
+            heading: "VR Pass",
+            description: "Для любителей квестов в виртуальной реальности существуют специальные игры любой сложности, которые могут отравить вас как в классическую комнату, так и на другую планету. Для детей различного возраста также предусмотрены развивающие игры и  приложения.",
+            client: "VR Pass",
+            activity: "Дизайн UI/UX, брендинг и разработка"
+        })
 
-    //include ../blocks/case-task/case-task
-    //+case-task("Разработать информационный корпоративный сайт с возможностью записаться на игру, с выбором даты, и времени игры.", "vr-pass", {
-    //    x1: "images/case-task/pad.png",
-    //    x2: "images/case-task/pad@2x.png"
-    //})
+        //include ../blocks/_sections/case-task/case-task
+        //+case-task("Разработать информационный корпоративный сайт с возможностью записаться на игру, с выбором даты, и времени игры.", "vr-pass", {
+        //    x1: "images/case-task/pad.png",
+        //    x2: "images/case-task/pad@2x.png"
+        //})
 
     include ../blocks/_sections/next-page/next-page
     +next-page({

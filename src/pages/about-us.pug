@@ -12,17 +12,18 @@ block content
         hamburger: true
     })
 
-    include ../blocks/_sections/about-hero/about-hero
-    //include ../blocks/services-carousel/services-carousel
-    include ../blocks/_sections/about-team/about-team
-    include ../blocks/_sections/clients-carousel/clients-carousel
+    main.page__main
+        include ../blocks/_sections/about-hero/about-hero
+        //include ../blocks/services-carousel/services-carousel
+        include ../blocks/_sections/about-team/about-team
+        include ../blocks/_sections/clients-carousel/clients-carousel
 
-    include ../blocks/_sections/next-page/next-page
-    +next-page({
-        href: "contacts.html",
-        overHeading: "Далее",
-        heading: "Контакты",
-        description: false
-    })
+        include ../blocks/_sections/next-page/next-page
+        +next-page({
+            href: "contacts.html",
+            overHeading: "Далее",
+            heading: "Контакты",
+            description: false
+        })
 
     include ../blocks/_parts/footer/footer
