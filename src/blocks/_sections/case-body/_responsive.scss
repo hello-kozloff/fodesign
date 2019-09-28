@@ -1,0 +1,9 @@
+@import "../../../sass/smart-grid";
+
+.case-body {
+  @media (max-width: $break_largeDesktop) {
+    &__content {
+      padding: 0;
+    }
+  }
+}

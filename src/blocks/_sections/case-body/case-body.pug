@@ -1,0 +1,7 @@
+include ../../../core/bemto
+
+mixin case-body(images)
+    +b("section").case-body
+        +e.content
+            each image in images
+                +e("img")(src=image).lazyload
