@@ -28,6 +28,7 @@ $(document).ready(() => {
         accessibility: false,
         pageDots: false,
         prevNextButtons: false,
+        adaptiveHeight: true,
         on: {
             ready: onBriefReady(),
             change: event => onBriefChange(event)
@@ -118,6 +119,18 @@ function onBriefChange(id) {
 
         case WINDOW_FINISH:
             console.log("--brief-data", $brief.data);
+            $.ajax({
+                type: "POST",
+                url: "../ajax-send-brief.php",
+                data: $brief.data,
+                success: () => {
+                    console.log("Brief sending success");
+                },
+                error: () => {
+                    console.log("Brief sending error!");
+                }
+            });
+
             $footer.addClass("brief__footer_is-hidden");
             break;
     }

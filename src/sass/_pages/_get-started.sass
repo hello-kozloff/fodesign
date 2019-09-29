@@ -1,4 +1,13 @@
+@import "../../sass/smart-grid"
+
 .page_layout_get-started
   .page__wrapper
     width: 100%
     height: 100vh
+    max-height: 980px
+    min-height: 770px
+
+    @media (max-width: $break_largeTablet)
+      height: 100%
+      max-height: none
+      min-height: 400px

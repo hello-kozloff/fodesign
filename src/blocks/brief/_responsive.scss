@@ -1,0 +1,169 @@
+@import "../../sass/smart-grid";
+
+.brief {
+  @media (max-width: $break_largeTablet) {
+    .brief__carousel.brief__wrapper {
+      padding: 0;
+    }
+
+    &__heading {
+      margin-bottom: 0;
+      font-size: 32px;
+    }
+
+    &__description {
+      margin-top: 0;
+    }
+
+    &__content {
+      margin-top: 60px;
+    }
+
+    &__window {
+      &_about {
+        .brief__text {
+          font-size: 14px;
+          min-height: 150px;
+        }
+      }
+
+      &_finish {
+        .brief__content {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $break_smallTablet) {
+    &__viewport {
+      padding-top: 80px;
+    }
+
+    &__heading {
+      font-size: 23px;
+    }
+
+    &__content {
+      margin-top: 20px;
+    }
+
+    &__window {
+      &_hello {
+        padding-bottom: 190px;
+
+        .input {
+          height: 60px;
+
+          &__field,
+          &__placeholder {
+            font-size: 14px;
+          }
+
+          &__placeholder {
+            height: 35px;
+          }
+        }
+
+        .brief__item {
+          width: 100%;
+
+          &:nth-child(2n + 2) {
+            margin-left: 0;
+          }
+
+          &:nth-last-child(-n + 2) {
+            margin-top: 0;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 0
+          }
+        }
+      }
+
+      &_categories {
+        padding-bottom: 190px;
+
+        .brief__group {
+          width: 100%;
+
+          &:first-child,
+          &:last-child {
+            padding: 0;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+
+        .brief__category {
+          font-size: 14px;
+
+          &:not(:last-child) {
+            margin-bottom: 10px
+          }
+        }
+      }
+
+      &_budget {
+        padding-bottom: 250px;
+
+        .brief__information {
+          margin-top: 20px;
+        }
+
+        .brief__title {
+          font-size: 10px;
+        }
+
+        .brief__text {
+          display: none;
+        }
+      }
+
+      &_about {
+        padding-bottom: 190px;
+      }
+
+      &_finish {
+        padding-bottom: 60px;
+
+        .brief__description {
+          margin-top: 15px;
+          font-size: 14px;
+        }
+
+        .brief__content {
+          margin-top: 15px;
+
+          .button-has-icon {
+            text-align: left;
+
+            &__content {
+              font-size: 10px;
+            }
+
+            &:not(:last-child) {
+              margin-bottom: -5px;
+            }
+          }
+        }
+      }
+    }
+
+    &__footer {
+      height: auto;
+      padding: 15px 0;
+
+      .brief__wrapper {
+        flex-direction: column-reverse;
+      }
+
+      .button-has-icon__content {
+        margin-right: 0;
+      }
+    }
+  }
+}
