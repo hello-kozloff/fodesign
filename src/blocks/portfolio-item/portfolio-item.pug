@@ -1,9 +1,12 @@
 include ../../core/bemto
 
-mixin portfolio-item(href, content, image)
+mixin portfolio-item(href, content, image, gif=false)
     - var background = image.x1 + " 1x, " + image.x2 + " 2x"
 
     +b("a")(href=href data-bgset=background).portfolio-item.lazyload
+        if (gif !== false)
+            +e("div")(data-bgset=gif).gif.lazyload
+
         +e("div").overlay
             +e("span").heading= content.heading
             +e("p").description= content.description

@@ -2,6 +2,8 @@
 @import "../../sass/variables"
 
 .portfolio-item
+  position: relative
+
   max-width: 560px
   width: 100%
   height: 360px
@@ -15,7 +17,22 @@
   background-position: center
 
   //- portfolio-item__overlay - wrapper
+  &__gif
+    position: absolute
+
+    width: 100%
+    height: 100%
+
+    background-position: center
+    background-size: cover
+
+    @include transition()
+    opacity: 0
+
   &__overlay
+    position: relative
+    z-index: 1000
+
     width: 100%
     height: 100%
 
@@ -68,9 +85,13 @@
       vertical-align: middle
   //- portfolio-item__overlay - wrapper end
 
-  &:hover .portfolio-item__overlay,
-  &:focus .portfolio-item__overlay
-    opacity: 1
+  &:hover,
+  &:focus
+    .portfolio-item__gif
+      opacity: 1
+
+    .portfolio-item__overlay
+      opacity: 1
 
   &:active .portfolio-item__overlay
     background: rgba(#08090D, .3)
