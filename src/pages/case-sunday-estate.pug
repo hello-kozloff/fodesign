@@ -1,0 +1,38 @@
+extends ./contains/default
+
+block vars
+    - const title="fodesign / Дизайн студия Андрея Фомина / Кейс - Sunday Estate"
+    - const layout="case"
+    - const theme="dark"
+
+block content
+    include ../blocks/_parts/header/header
+    +header({
+        themefy: true,
+        hamburger: true
+    })
+
+    main.page__main
+        include ../blocks/_sections/case-hero/case-hero
+        +case-hero({
+            heading: "Sunday Estate",
+            description: "Разработали красивую посадочную страницу для Центра жилой недвижимости",
+            client: "Sunday Estate",
+            activity: "Дизайн UI/UX",
+            location: "https://www.behance.net/gallery/85589105/Sunday-Estate-Real-Estate-Landing-Page"
+        })
+
+        include ../blocks/_sections/case-body/case-body
+        +case-body([
+            "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/dd13a285589105.5d80a5cb6814d.png"
+        ])
+
+        include ../blocks/_sections/next-page/next-page
+        +next-page({
+            href: "case-vrpass.html",
+            overHeading: "Далее",
+            heading: "VR pass",
+            description: false
+        })
+
+    include ../blocks/_parts/footer/footer
