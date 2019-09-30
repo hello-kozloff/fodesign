@@ -1,0 +1,44 @@
+extends ./contains/default
+
+block vars
+    - const title="fodesign / Дизайн студия Андрея Фомина / Кейс - Finance tacker"
+    - const layout="case"
+    - const theme="dark"
+
+block content
+    include ../blocks/_parts/header/header
+    +header({
+        themefy: true,
+        hamburger: true
+    })
+
+    main.page__main
+        include ../blocks/_sections/case-hero/case-hero
+        +case-hero({
+            heading: "Finance tacker",
+            description: "Разработали удобный финансовый трэкер для фрилансеров",
+            client: "Finance tacker",
+            activity: "Дизайн UI/UX",
+            location: "https://www.behance.net/gallery/85744213/Finance-Management-App"
+        })
+
+        include ../blocks/_sections/case-body/case-body
+        +case-body([
+            "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a3992185744213.5d84c0b1389d2.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/8e2fe885744213.5d84c0b139dfd.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/4651d685744213.5d84c0b13978d.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/85cf9185744213.5d84c0b136d3c.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/d77a5b85744213.5d84c0b137bd5.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/c85dd685744213.5d84c0b13907d.png",
+            "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/1f73ba85744213.5d84c0b1382ff.png"
+        ])
+
+        include ../blocks/_sections/next-page/next-page
+        +next-page({
+            href: "case-vrpass.html",
+            overHeading: "Далее",
+            heading: "VR Pass",
+            description: false
+        })
+
+    include ../blocks/_parts/footer/footer

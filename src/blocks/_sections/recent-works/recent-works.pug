@@ -57,5 +57,21 @@ mixin recent-works(hasHeader, href, buttonText)
                     }
                 )
 
+            +e.item
+                +portfolio-item("case-finance-tacker.html",
+                    {
+                        heading: "Finance tacker",
+                        description: "Разработали удобный финансовый трэкер для фрилансеров",
+                        tag: {
+                            icon: "icon-web",
+                            text: "Дизайн"
+                        }
+                    },
+                    {
+                        x1: "images/portfolio-thumbnails/ft/_ft.jpg",
+                        x2: "images/portfolio-thumbnails/ft/_ft@2x.jpg"
+                    }
+                )
+
         +e.footer
             +button-explore(href, buttonText)
