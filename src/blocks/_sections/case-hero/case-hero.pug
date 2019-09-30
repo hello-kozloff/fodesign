@@ -16,4 +16,8 @@ mixin case-hero(object)
                     +e("h4").value= object.activity
 
                 +e.block
-                    +button-has-icon(object.location, "icon-arrow-right", "Посмотреть работу")
+                    +b("a")(href=object.location target="_blank").button-has-icon
+                        +e("span").icon
+                            i(class="icon-arrow-right")
+
+                        +e("span").content Посмотреть работу
