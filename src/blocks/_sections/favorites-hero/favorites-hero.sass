@@ -105,15 +105,31 @@
     max-height: 1080px
     min-height: 800px
 
+  &__carousel
   .flickity-viewport,
   .flickity-slider
     height: 100%
 
   &__slide
+    position: relative
+
     background-size: cover
     background-position: center
 
+  &__gif
+    position: absolute
+    z-index: 1000
+
+    width: 100%
+    height: 100%
+
+    background-position: center
+    background-size: cover
+
   &__overlay
+    position: relative
+    z-index: 1001
+
     width: 100%
     height: 100%
 
